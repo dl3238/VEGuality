@@ -26,7 +26,11 @@
             <a class="row vertically-centered" href="#">INSPIRE</a>
             <a class="row vertically-centered" href="#">LAUGH</a>
         </div>
-        <div class="button call-to-action rounded green">Join the Community</div>
+        <!-- <button show={ !user } class="btn btn-outline-success my-2 my-sm-0" type="button" onclick={ login }>Login</button>
+	      <button show={ user } class="btn btn-outline-danger my-2 my-sm-0" type="button" onclick={ logout }>Logout</button> -->
+
+        <div show={ !user } class="button call-to-action rounded green" onclick= { login }>Join the Community</div>
+        <div show={ user } class="button call-to-action rounded green" onclick= { logout }>Logout</div>
         <div class="button">
             <i class="material-icons">
                 shopping_cart
@@ -163,16 +167,25 @@
 </html>
 
   <script>
-    // JAVASCRIPT
-    let tag = this;
 
-    this.myMsg = "Hello!";
-    this.foo = "special";
+    login() {
+			var provider = new firebase.auth.GoogleAuthProvider();
+			firebase.auth().signInWithPopup(provider);
+		};
 
-    this.bar = function(event) {
-      alert('CLICKED!');
-      tag.myMsg = "Goodbye!";
-    }
+		logout() {
+			firebase.auth().signOut();
+		};
+
+    firebase.auth().onAuthStateChanged(userObj => {
+      if (userObj) {
+        this.user = userObj;
+      } else {
+        this.user = null;
+      }
+      this.update();
+    });
+
   </script>
 
 </homepage>
