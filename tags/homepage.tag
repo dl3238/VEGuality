@@ -7,7 +7,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>TITLE</title>
+    <title>VEGuality</title>
 
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -17,12 +17,11 @@
 <body class="no-margin">
     <nav class="row centered">
         <div class="logo">
-            <img src="https://via.placeholder.com/100x60" />
+            <img style="width:30%;" src="assets/logo.png" />
         </div>
         <div class="links row vertically-centered">
             <a class="row vertically-centered" href="#">SWITCH</a>
             <a class="row vertically-centered" href="#">COOK</a>
-            <a class="row vertically-centered" href="#">SOCIALISE</a>
             <a class="row vertically-centered" href="#">EXPLORE</a>
             <a class="row vertically-centered" href="#">INSPIRE</a>
             <a class="row vertically-centered" href="#">LAUGH</a>
