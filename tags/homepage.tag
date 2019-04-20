@@ -167,16 +167,16 @@
 </html>
 
   <script>
-
+  //login
     login() {
 			var provider = new firebase.auth.GoogleAuthProvider();
 			firebase.auth().signInWithPopup(provider);
 		};
-
+  //logout
 		logout() {
 			firebase.auth().signOut();
 		};
-
+  //change view of buttons
     firebase.auth().onAuthStateChanged(userObj => {
       if (userObj) {
         this.user = userObj;
