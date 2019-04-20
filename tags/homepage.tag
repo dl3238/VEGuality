@@ -17,9 +17,9 @@
 <body class="no-margin">
     <nav class="row centered">
         <div class="logo">
-            <img style="width:30%;" src="assets/logo.png" />
+            <img style="margin-top:20px;width:30%;" src="assets/logo.png" />
         </div>
-        <div class="links row vertically-centered">
+        <div style="padding-top:20px;"class="links row vertically-centered">
             <a class="row vertically-centered" href="#">SWITCH</a>
             <a class="row vertically-centered" href="#">COOK</a>
             <a class="row vertically-centered" href="#">EXPLORE</a>
@@ -29,9 +29,9 @@
         <!-- <button show={ !user } class="btn btn-outline-success my-2 my-sm-0" type="button" onclick={ login }>Login</button>
 	      <button show={ user } class="btn btn-outline-danger my-2 my-sm-0" type="button" onclick={ logout }>Logout</button> -->
 
-        <div show={ !user } class="button call-to-action rounded green" onclick= { login }>Join the Community</div>
-        <div show={ user } class="button call-to-action rounded green" onclick= { logout }>Logout</div>
-        <div class="button">
+        <div style="margin-top:20px;"show={ !user } class="button call-to-action rounded green" onclick= { login }>Join the Community</div>
+        <div style="margin-top:20px;"show={ user } class="button call-to-action rounded green" onclick= { logout }>Logout</div>
+        <div style="margin-top:20px;"class="button">
             <i class="material-icons">
                 shopping_cart
             </i>
