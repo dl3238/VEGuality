@@ -1,9 +1,4 @@
 <homepage>
-  <!-- HTML -->
-  <!doctype html>
-
-  <html lang="en">
-
     <head>
       <meta charset="utf-8">
 
@@ -26,10 +21,8 @@
           <a class="row vertically-centered" href="#">INSPIRE</a>
           <a class="row vertically-centered" href="#">LAUGH</a>
         </div>
-        <!-- <button show={ !user } class="btn btn-outline-success my-2 my-sm-0" type="button" onclick={ login }>Login</button> <button show={ user } class="btn btn-outline-danger my-2 my-sm-0" type="button" onclick={ logout }>Logout</button> -->
-
-        <div style="margin-top:20px;" show={ !user } class="button call-to-action rounded green" onclick={ login="login" }="}">Join the Community</div>
-        <div style="margin-top:20px;" show={ user } class="button call-to-action rounded green" onclick={ logout="logout" }="}">Logout</div>
+        <div style="margin-top:20px;" show={ !user } class="button call-to-action rounded green" onclick={ login }>Join the Community</div>
+        <div style="margin-top:20px;" show={ user } class="button call-to-action rounded green" onclick={ logout }>Logout</div>
         <div style="margin-top:20px;" class="button">
           <i class="material-icons">
             shopping_cart
