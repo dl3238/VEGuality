@@ -64,13 +64,13 @@
               </div>
               <div class="content">
                   <img src="https://via.placeholder.com/320x250" />
-                  <h3></h3>
-                  <p></p>
+                  <h3>Name of Dish</h3>
+                  <p>short writeup about it</p>
               </div>
               <div class="content">
                   <img src="https://via.placeholder.com/320x250" />
-                  <h3></h3>
-                  <p></p>
+                  <h3>Name of Dish</h3>
+                  <p>short writeup about it</p>
               </div>
               <div class="right arrow row centered" onclick="changeSlide1(1)">
                   <i class="material-icons">
