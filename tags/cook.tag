@@ -13,7 +13,7 @@
   <body class="no-margin">
       <nav class="row centered">
           <div class="logo">
-              <img src="https://via.placeholder.com/100x60" />
+              <img style="margin-top:20px;width:30%;" src="assets/logo.png"/>
           </div>
           <div class="links row vertically-centered">
               <a class="row vertically-centered" href="#">SWITCH</a>
@@ -22,8 +22,9 @@
               <a class="row vertically-centered" href="#">INSPIRE</a>
               <a class="row vertically-centered" href="#">LAUGH</a>
           </div>
-          <div class="button call-to-action rounded green">Join the Community</div>
-          <div class="button">
+          <div style="margin-top:20px;" show={ !user } class="button call-to-action rounded green" onclick={ login }>Join the Community</div>
+          <div style="margin-top:20px;" show={ user } class="button call-to-action rounded green" onclick={ logout }>Logout</div>
+          <div style="margin-top:20px;" class="button">
               <i class="material-icons">
                   shopping_cart
               </i>
@@ -157,6 +158,28 @@
       <script src="js/switch-carousel-1.js"></script>
       <script src="js/switch-carousel-2.js"></script>
   </body>
+
+  <script>
+    //login
+    login() {
+      var provider = new firebase.auth.GoogleAuthProvider();
+      firebase.auth().signInWithPopup(provider);
+    };
+    //logout
+    logout() {
+      firebase.auth().signOut();
+    };
+    //change view of buttons
+    firebase.auth().onAuthStateChanged(userObj => {
+      if (userObj) {
+        this.user = userObj;
+      } else {
+        this.user = null;
+      }
+      this.update();
+    });
+
+  </script>
 
 
 </cook>
