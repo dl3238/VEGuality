@@ -80,7 +80,7 @@
         <!-- Card 3 -->
         <div class="card overlapped">
           <div class="top">
-            <img src="assets/mpv3.jpg" height="300px" width="300px">
+            <img src="assets/mpv3.jpeg" height="300px" width="300px">
           </div>
           <div class="bottom">
             <div class="description">
@@ -101,7 +101,7 @@
         <!-- Card 1 -->
         <div class="card overlapped">
           <div class="top">
-            <img src="assets/mpv4.jpg" height="300px" width="300px">
+            <img src="assets/mpv4.png" height="300px" width="300px">
           </div>
           <div class="bottom">
             <div class="description">
@@ -135,9 +135,9 @@
           </div>
         </div>
         <!-- Card 3 -->
-        <div class="card overlapped">
+        <!-- <div class="card overlapped">
           <div class="top">
-            <img src="assets/mpv6.jpg" height="300px" width="300px">
+            <img src="assets/mpv6.png" height="300px" width="300px">
           </div>
           <div class="bottom">
             <div class="description">
@@ -151,7 +151,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </body>
