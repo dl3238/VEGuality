@@ -12,7 +12,8 @@
   <body class="no-margin">
     <nav class="row centered">
       <div class="logo">
-        <img href="./" style="margin-top:20px;width:30%;" src="/assets/logo.png"/>
+        <a href="/"><img style="margin-top:20px;width:30%;" src="/assets/logo.png"/></a>
+
       </div>
       <div class="links row vertically-centered">
         <a class="row vertically-centered" href="#">SWITCH</a>
