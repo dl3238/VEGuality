@@ -13,10 +13,10 @@
   <body class="no-margin">
     <nav class="row centered">
       <div class="logo">
-        <img style="margin-top:20px;width:30%;" src="/assets/logo.png"/>
+        <a href="/"><img style="margin-top:20px;width:30%;" src="/assets/logo.png"/></a>
       </div>
       <div class="links row vertically-centered">
-        <a class="row vertically-centered" href="#">SWITCH</a>
+        <a class="row vertically-centered" href="switch.html">SWITCH</a>
         <a class="row vertically-centered" href="#">COOK</a>
         <a class="row vertically-centered" href="#">EXPLORE</a>
         <a class="row vertically-centered" href="#">INSPIRE</a>
