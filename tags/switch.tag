@@ -12,11 +12,11 @@
   <body class="no-margin">
     <nav class="row centered">
       <div class="logo">
-        <img style="margin-top:20px;width:30%;" src="/assets/logo.png"/>
+        <img href="./" style="margin-top:20px;width:30%;" src="/assets/logo.png"/>
       </div>
       <div class="links row vertically-centered">
         <a class="row vertically-centered" href="#">SWITCH</a>
-        <a class="row vertically-centered" href="#">COOK</a>
+        <a class="row vertically-centered" href="cook.html">COOK</a>
         <a class="row vertically-centered" href="#">EXPLORE</a>
         <a class="row vertically-centered" href="#">INSPIRE</a>
         <a class="row vertically-centered" href="#">LAUGH</a>
