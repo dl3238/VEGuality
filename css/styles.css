@@ -20,7 +20,7 @@ nav {
 
 .logo {
     cursor: pointer;
-    
+
 }
 
 
@@ -139,12 +139,12 @@ nav {
     margin: 50px 0;
 }
 
-.container {
+/* .container {
     width: 80%;
     margin: auto;
     min-width: 1000px;
     margin-top: 80px;
-}
+} */
 
 .card {
     width: 320px;

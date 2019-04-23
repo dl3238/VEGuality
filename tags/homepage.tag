@@ -23,11 +23,8 @@
       </div>
       <div style="margin-top:20px;" show={ !user } class="button call-to-action rounded green" onclick={ login }>Join the Community</div>
       <div style="margin-top:20px;" show={ user } class="button call-to-action rounded green" onclick={ logout }>Logout</div>
-      <div style="margin-top:20px;" class="button">
-        <i class="material-icons">
-          shopping_cart
-        </i>
-      </div>
+      <div style="margin-left:10px;margin-top:20px;" show={ user } class="button call-to-action rounded green" onclick={ }>Profile</div>
+
     </nav>
     <div class="header">
       <div class="home bg row vertically-centered space-around">
