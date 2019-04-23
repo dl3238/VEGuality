@@ -77,7 +77,7 @@
         <!-- Card 3 -->
         <div class="card1 overlapped">
           <div class="top">
-            <img src="assets/mpv3.jpg" height="300px" width="300px">
+            <img src="assets/mpv3.jpeg" height="300px" width="300px">
           </div>
           <div class="bottom">
             <div class="description">
@@ -98,7 +98,7 @@
         <!-- Card 1 -->
         <div class="card1 overlapped">
           <div class="top">
-            <img src="assets/mpv4.jpg" height="300px" width="300px">
+            <img src="assets/mpv4.png" height="300px" width="300px">
           </div>
           <div class="bottom">
             <div class="description">
@@ -117,24 +117,6 @@
         <div class="card1 overlapped">
           <div class="top">
             <img src="assets/mpv5.jpg" height="300px" width="300px">
-          </div>
-          <div class="bottom">
-            <div class="description">
-              <h2>Make the Move</h2>
-              <p>Want to eat more delicious plant-based food? Here's how to do it.</p>
-              <div class="button call-to-action pink">
-                Show Me
-                <i class="material-icons">
-                  keyboard_arrow_right
-                </i>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Card 3 -->
-        <div class="card1 overlapped">
-          <div class="top">
-            <img src="assets/mpv6.jpg" height="300px" width="300px">
           </div>
           <div class="bottom">
             <div class="description">
