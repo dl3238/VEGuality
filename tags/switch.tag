@@ -54,12 +54,12 @@
           </i>
         </div>
         <div class="content">
-          <img src="assets/m1.jpg" height="250px" width="280px">
+          <img src="/assets/m1.jpeg" height="250px" width="280px">
           <h3></h3>
           <p></p>
         </div>
         <div class="content">
-          <img src="assets/m2.jpg" height="250px" width="280px">
+          <img src="/assets/m2.jpeg" height="250px" width="280px">
           <h3></h3>
           <p></p>
         </div>
@@ -82,14 +82,14 @@
           burritos, granola bars, canned soups, and nuts.</p>
       </div>
       <div class="right image-stacked">
-        <img src="assets/s1.jpg" height="200px" width="300px">
-        <img src="assets/s1p2.jpg" height="300px" width="300px">
+        <img src="/assets/s1.jpg" height="200px" width="300px">
+        <img src="/assets/s1p2.jpg" height="300px" width="300px">
       </div>
     </div>
     <div class="section row no-padding centered">
       <div class="left image-stacked">
-        <img src="assets/s2.jpg" height="200px" width="300px">
-        <img src="assets/s2p2.jpg" height="200px" width="300px">
+        <img src="/assets/s2.jpg" height="200px" width="300px">
+        <img src="/assets/s2p2.jpg" height="200px" width="300px">
       </div>
       <div class="right">
         <h1>Listen to Them</h1>
@@ -102,14 +102,14 @@
         <p>If you want your family and friends to see things the way you do, stay healthy and stay kind. Even if they don’t get it at first, in time they’ll realize how great what you’re doing is for you (not to mention the world).</p>
       </div>
       <div class="right image-stacked">
-        <img src="assets/s3.jpg" height="200px" width="300px">
-        <img src="assets/s3p2.jpg" height="300px" width="200px">
+        <img src="/assets/s3.jpg" height="200px" width="300px">
+        <img src="/assets/s3p2.jpg" height="300px" width="200px">
       </div>
     </div>
     <div class="section row no-padding centered">
       <div class="left image-stacked">
-        <img src="assets/s4.jpg" height="200px" width="300px">
-        <img src="assets/s4p2.jpg" height="300px" width="200px">
+        <img src="/assets/s4.jpg" height="200px" width="300px">
+        <img src="/assets/s4p2.jpg" height="300px" width="200px">
       </div>
       <div class="right">
         <h1>Practice Patience</h1>
@@ -131,13 +131,13 @@
           </i>
         </div>
         <div class="content">
-          <img src="assets/switchsb1.jpg" height="250px" width="320px">
+          <img src="/assets/switchsb1.jpg" height="250px" width="320px">
           <h3></h3>
           <p></p>
           <a href="#" class="button green">Add to Grocery List</a>
         </div>
         <div class="content">
-          <img src="assets/switchsb2.jpg" height="250px" width="320px">
+          <img src="/assets/switchsb2.jpg" height="250px" width="320px">
           <h3></h3>
           <p></p>
           <a href="#" class="button green">Add to Grocery List</a>
@@ -162,14 +162,14 @@
           </i>
         </div>
       </div>
-      <div class="left">
-        <img src="assets/switchguide.jpg" height="400px" width="300px">
+      <div style="margin-right:30px;"class="left">
+        <img src="/assets/switchguide.png" height="400px" width="300px">
       </div>
     </div>
     <div class="section no-margin no-padding full-width row centered">
-      <img src="assets/switchend1.jpg" height="250px" width="320px">
-      <img src="assets/switchend2.jpg" height="250px" width="320px">
-      <img src="assets/switchend3.jpg" height="250px" width="320px">
+      <img src="/assets/switchend1.jpg" height="250px" width="320px">
+      <img src="/assets/switchend2.jpg" height="250px" width="320px">
+      <img src="/assets/switchend3.jpg" height="250px" width="320px">
     </div>
 
   </body>

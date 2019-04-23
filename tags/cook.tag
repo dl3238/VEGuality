@@ -57,19 +57,19 @@
           </i>
         </div>
         <div class="content">
-          <img src="assets/cb1.jpg" height="250px" width="280px">
+          <img src="/assets/cb1.jpg" height="250px" width="280px">
           <h3>
             <i>Bacon</i>
             and Avocado Breakfast Sandwich</h3>
           <p>What's better than a whole grain breakfast sandwich packed with savory flavors?!</p>
         </div>
         <div class="content">
-          <img src="assets/cb2.jpg" height="250px" width="280px">
+          <img src="/assets/cb2.jpg" height="250px" width="280px">
           <h3>Name of Dish</h3>
           <p>short writeup about it</p>
         </div>
         <div class="content">
-          <img src="assets/cb3.jpg" height="250px" width="280px">
+          <img src="/assets/cb3.jpg" height="250px" width="280px">
           <h3>Name of Dish</h3>
           <p>short writeup about it</p>
         </div>
@@ -90,17 +90,17 @@
           </i>
         </div>
         <div class="content">
-          <img src="assets/cl1.jpg" height="280px" width="250px">
+          <img src="/assets/cl1.jpg" height="280px" width="250px">
           <h3>name of dish</h3>
           <p>short write up</p>
         </div>
         <div class="content">
-          <img src="assets/cl2.jpg" height="250px" width="280px">
+          <img src="/assets/cl2.jpg" height="250px" width="280px">
           <h3></h3>
           <p></p>
         </div>
         <div class="content">
-          <img src="assets/cl3.jpg" height="250px" width="280px">
+          <img src="/assets/cl3.jpg" height="250px" width="280px">
           <h3></h3>
           <p></p>
         </div>
@@ -121,17 +121,17 @@
           </i>
         </div>
         <div class="content">
-          <img src="assets/cd1.jpg" height="250px" width="280px">
+          <img src="/assets/cd1.jpg" height="250px" width="280px">
           <h3>Name of Dish</h3>
           <p>short writeup about it</p>
         </div>
         <div class="content">
-          <img src="assets/cd2.jpg" height="250px" width="280px">
+          <img src="/assets/cd2.jpg" height="250px" width="280px">
           <h3></h3>
           <p></p>
         </div>
         <div class="content">
-          <img src="assets/cd3.jpg" height="250px" width="280px">
+          <img src="/assets/cd3.jpg" height="250px" width="280px">
           <h3></h3>
           <p></p>
         </div>
@@ -151,7 +151,7 @@
         <div class="button green">Create your grocery list</div>
       </div>
       <div class="right row centered">
-        <img src="assets/grocerylist.jpg" height="300px" width="500px">
+        <img src="/assets/grocerylist.jpg" height="300px" width="500px">
       </div>
     </div>
 
