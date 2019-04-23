@@ -39,7 +39,7 @@
     <div class="section column centered">
       <div class="row vertically-centered space-around">
         <!-- Card 1 -->
-        <div class="card overlapped">
+        <div class="card1 overlapped">
           <div class="top">
             <img src="assets/mpv1.jpg" height="300px" width="300px">
           </div>
@@ -57,7 +57,7 @@
           </div>
         </div>
         <!-- Card 2 -->
-        <div class="card overlapped">
+        <div class="card1 overlapped">
           <div class="top">
             <img src="assets/mpv2.jpg" height="300px" width="300px">
           </div>
@@ -75,7 +75,7 @@
           </div>
         </div>
         <!-- Card 3 -->
-        <div class="card overlapped">
+        <div class="card1 overlapped">
           <div class="top">
             <img src="assets/mpv3.jpg" height="300px" width="300px">
           </div>
@@ -96,7 +96,7 @@
       <!-- second row -->
       <div class="row vertically-centered space-around">
         <!-- Card 1 -->
-        <div class="card overlapped">
+        <div class="card1 overlapped">
           <div class="top">
             <img src="assets/mpv4.jpg" height="300px" width="300px">
           </div>
@@ -114,7 +114,7 @@
           </div>
         </div>
         <!-- Card 2 -->
-        <div class="card overlapped">
+        <div class="card1 overlapped">
           <div class="top">
             <img src="assets/mpv5.jpg" height="300px" width="300px">
           </div>
@@ -132,7 +132,7 @@
           </div>
         </div>
         <!-- Card 3 -->
-        <div class="card overlapped">
+        <div class="card1 overlapped">
           <div class="top">
             <img src="assets/mpv6.jpg" height="300px" width="300px">
           </div>

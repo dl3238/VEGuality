@@ -4,6 +4,7 @@
     <meta charset="utf-8">
 
     <title>TITLE</title>
+    
 
     <link rel="stylesheet" href="/css/styles.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -16,7 +17,7 @@
         <a href="/"><img style="margin-top:20px;width:30%;" src="/assets/logo.png"/></a>
 
       </div>
-      <div style="padding-top:20px;"class="links row vertically-centered">
+      <div style="padding-top:20px;" class="links row vertically-centered">
         <a class="row vertically-centered" href="switch.html">SWITCH</a>
         <a class="row vertically-centered" href="cook.html">COOK</a>
         <a class="row vertically-centered" href="#">EXPLORE</a>
@@ -28,14 +29,20 @@
       <div style="margin-left:10px;margin-top:20px;" show={ user } class="button call-to-action rounded green" onclick={ }>Profile</div>
     </nav>
 
-    <div class="container">
+    <div style="margin-top:70px;" class="container">
       <div class="row">
         <div class="col-4">
+          <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
 
         </div>
-        <div class="col-8">
-
-        </div>
+        <div class="col-8"></div>
 
       </div>
 
