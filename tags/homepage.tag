@@ -23,11 +23,8 @@
       </div>
       <div style="margin-top:20px;" show={ !user } class="button call-to-action rounded green" onclick={ login }>Join the Community</div>
       <div style="margin-top:20px;" show={ user } class="button call-to-action rounded green" onclick={ logout }>Logout</div>
-      <div style="margin-top:20px;" class="button">
-        <i class="material-icons">
-          shopping_cart
-        </i>
-      </div>
+      <div style="margin-left:10px;margin-top:20px;" show={ user } class="button call-to-action rounded green" onclick={ }>Profile</div>
+
     </nav>
     <div class="header">
       <div class="home bg row vertically-centered space-around">
@@ -42,7 +39,7 @@
     <div class="section column centered">
       <div class="row vertically-centered space-around">
         <!-- Card 1 -->
-        <div class="card overlapped">
+        <div class="card1 overlapped">
           <div class="top">
             <img src="assets/mpv1.jpg" height="300px" width="300px">
           </div>
@@ -60,7 +57,7 @@
           </div>
         </div>
         <!-- Card 2 -->
-        <div class="card overlapped">
+        <div class="card1 overlapped">
           <div class="top">
             <img src="assets/mpv2.jpg" height="300px" width="300px">
           </div>
@@ -78,7 +75,7 @@
           </div>
         </div>
         <!-- Card 3 -->
-        <div class="card overlapped">
+        <div class="card1 overlapped">
           <div class="top">
             <img src="assets/mpv3.jpeg" height="300px" width="300px">
           </div>
@@ -99,7 +96,7 @@
       <!-- second row -->
       <div class="row vertically-centered space-around">
         <!-- Card 1 -->
-        <div class="card overlapped">
+        <div class="card1 overlapped">
           <div class="top">
             <img src="assets/mpv4.png" height="300px" width="300px">
           </div>
@@ -117,7 +114,7 @@
           </div>
         </div>
         <!-- Card 2 -->
-        <div class="card overlapped">
+        <div class="card1 overlapped">
           <div class="top">
             <img src="assets/mpv5.jpg" height="300px" width="300px">
           </div>
@@ -134,24 +131,6 @@
             </div>
           </div>
         </div>
-        <!-- Card 3 -->
-        <!-- <div class="card overlapped">
-          <div class="top">
-            <img src="assets/mpv6.png" height="300px" width="300px">
-          </div>
-          <div class="bottom">
-            <div class="description">
-              <h2>Make the Move</h2>
-              <p>Want to eat more delicious plant-based food? Here's how to do it.</p>
-              <div class="button call-to-action pink">
-                Show Me
-                <i class="material-icons">
-                  keyboard_arrow_right
-                </i>
-              </div>
-            </div>
-          </div>
-        </div> -->
       </div>
     </div>
   </body>
