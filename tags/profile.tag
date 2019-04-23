@@ -4,7 +4,6 @@
     <meta charset="utf-8">
 
     <title>TITLE</title>
-    
 
     <link rel="stylesheet" href="/css/styles.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -29,15 +28,15 @@
       <div style="margin-left:10px;margin-top:20px;" show={ user } class="button call-to-action rounded green" onclick={ }>Profile</div>
     </nav>
 
-    <div style="margin-top:70px;" class="container">
+    <div style="margin-top:120px;" class="container">
       <div class="row">
         <div class="col-4">
           <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
+            <img src="/assets/avatar.png" style="width:70%;"class="card-img-top" alt="avatar">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+              <h5 class="card-title">John Smith</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <a href="#">Edit profile</a>
             </div>
           </div>
 
