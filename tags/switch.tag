@@ -107,7 +107,7 @@
     <div class="section row no-padding centered">
       <div class="left image-stacked">
         <img src="/assets/s4.jpg" height="200px" width="300px">
-        <img src="/assets/s4p2.jpg" height="300px" width="200px">
+        <img src="/assets/s4p2.jpg" height="300px" width="280px">
       </div>
       <div class="right">
         <h1>Practice Patience</h1>

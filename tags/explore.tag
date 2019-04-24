@@ -45,13 +45,13 @@
         </div>
         <div class="content">
           <img src="/assets/r1.jpg" height="250px" width="280px">
-          <h3></h3>
-          <p></p>
+          <h3>Pancho's Vegan Tacos</h3>
+          <p>Taste great Mexican Food without any regrets, no trans fats, great sources of plant base proteins and delicious authentic flavors!</p>
         </div>
         <div class="content">
           <img src="/assets/r2.jpg" height="250px" width="280px">
-          <h3></h3>
-          <p></p>
+          <h3>Hangawi</h3>
+          <p>Enjoy a Korean vegan restaurant serving healthy, often light but filling dishes.</p>
         </div>
         <div class="right arrow row centered" onclick="changeSlide1(1)">
           <i class="material-icons">
@@ -71,13 +71,13 @@
         </div>
         <div class="content">
           <img src="/assets/f1.jpeg" height="250px" width="280px">
-          <h3></h3>
-          <p></p>
+          <h3>Hiraeth</h3>
+          <p>Vegan label brand was created to serve a new generation of conscious women who value quality and design but do not want to compromise on their ethical beliefs.</p>
         </div>
         <div class="content">
           <img src="/assets/f2.jpg" height="250px" width="280px">
-          <h3></h3>
-          <p></p>
+          <h3>Time IV Change</h3>
+          <p>TIVC has a collection of classic-style handcrafted vegan watches, in which their timepieces are cruelty-free and Peta-approved!</p>
         </div>
         <div class="right arrow row centered" onclick="changeSlide1(1)">
           <i class="material-icons">
@@ -97,13 +97,13 @@
         </div>
         <div class="content">
           <img src="/assets/berlin.jpeg" height="250px" width="280px">
-          <h3></h3>
-          <p></p>
+          <h3>Berlin, Germany</h3>
+          <p>Rated the World's Most Vegan-Friendly City. Click here to find out why!</p>
         </div>
         <div class="content">
           <img src="/assets/nyc.jpg" height="250px" width="280px">
-          <h3></h3>
-          <p></p>
+          <h3>New York, New York</h3>
+          <p>A city that never sleeps! Find out why vegan-style!</p>
         </div>
         <div class="right arrow row centered" onclick="changeSlide1(1)">
           <i class="material-icons">
@@ -123,12 +123,12 @@
         </div>
         <div class="content">
           <img src="/assets/e1.jpeg" height="250px" width="280px">
-          <h3></h3>
+          <h3>The Seed NYC Market</h3>
           <p></p>
         </div>
         <div class="content">
           <img src="/assets/e2.jpg" height="250px" width="280px">
-          <h3></h3>
+          <h3>Vegan Kamayan Feast</h3>
           <p></p>
         </div>
         <div class="right arrow row centered" onclick="changeSlide1(1)">
