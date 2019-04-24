@@ -145,7 +145,7 @@
         <h1>It Just Got Easier</h1>
         <h4>Planning your supermarketing has never been easier. Write down what you need to buy so it's ready for your next trip to the grocers!
         </h4>
-        <div class="button green">Create your grocery list</div>
+        <div class="button green" onclick={ groList }>Create your grocery list</div>
       </div>
       <div class="right row centered">
         <img src="/assets/grocerylist.jpg" height="300px" width="500px">
@@ -158,6 +158,7 @@
   </body>
 
   <script>
+    this.user = "";
     //login
     login() {
       var provider = new firebase.auth.GoogleAuthProvider();
@@ -171,11 +172,21 @@
     firebase.auth().onAuthStateChanged(userObj => {
       if (userObj) {
         this.user = userObj;
+        console.log(this.user);
       } else {
         this.user = null;
       }
       this.update();
     });
+
+    //create grocerylist button
+    // groList(e) {
+    //   if (e == null) {
+    //     alert "Please use your google account to log in first!";
+    //   } else{
+    //    null;
+    //   }
+    // };
   </script>
 
 </cook>
