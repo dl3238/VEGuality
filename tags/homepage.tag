@@ -31,7 +31,6 @@
         <div class="overlay column centered">
           <h5>FEEL WONDERFUL. LOOK GREAT.</h5>
           <h1>The road to a better start on your plate.</h1>
-          <div class="button call-to-action green">Get Your Free Guide Now</div>
         </div>
       </div>
     </div>
@@ -45,8 +44,8 @@
           </div>
           <div class="bottom">
             <div class="description">
-              <h2>Make the Move</h2>
-              <p>Want to eat more delicious plant-based food? Here's how to do it.</p>
+              <h2>Switch</h2>
+              <p>Want to know more about veganism, the myths, tips to talk to family and friends, and how to be maintain a plant-based life? Here's how!</p>
               <div class="button call-to-action pink">
                 Show Me
                 <i class="material-icons">
@@ -63,8 +62,8 @@
           </div>
           <div class="bottom">
             <div class="description">
-              <h2>Make the Move</h2>
-              <p>Want to eat more delicious plant-based food? Here's how to do it.</p>
+              <h2>Cook</h2>
+              <p>Mouthwatering meat-free meals are easy to cook. Check out the meals and create your own grocery list.</p>
               <div class="button call-to-action pink">
                 Show Me
                 <i class="material-icons">
@@ -77,12 +76,12 @@
         <!-- Card 3 -->
         <div class="card1 overlapped">
           <div class="top">
-            <img src="assets/mpv3.jpeg" height="300px" width="300px">
+            <img src="assets/mpv3.png" height="300px" width="300px">
           </div>
           <div class="bottom">
             <div class="description">
-              <h2>Make the Move</h2>
-              <p>Want to eat more delicious plant-based food? Here's how to do it.</p>
+              <h2>Explore</h2>
+              <p>Vegans are everywhere! Check out restaurants to dine, fashion to wear, cities to visit, and movements to follow and empower.</p>
               <div class="button call-to-action pink">
                 Show Me
                 <i class="material-icons">
@@ -102,8 +101,8 @@
           </div>
           <div class="bottom">
             <div class="description">
-              <h2>Make the Move</h2>
-              <p>Want to eat more delicious plant-based food? Here's how to do it.</p>
+              <h2>Inspire</h2>
+              <p>You are NOT alone. Read their stories and connect with other people. Have confidence to post your own story!</p>
               <div class="button call-to-action pink">
                 Show Me
                 <i class="material-icons">
@@ -120,8 +119,8 @@
           </div>
           <div class="bottom">
             <div class="description">
-              <h2>Make the Move</h2>
-              <p>Want to eat more delicious plant-based food? Here's how to do it.</p>
+              <h2>Laugh</h2>
+              <p>We all need humor. It's good for the soul. Click here for comics, pick up lines, and jokes. Add your own!</p>
               <div class="button call-to-action pink">
                 Show Me
                 <i class="material-icons">

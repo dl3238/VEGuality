@@ -62,13 +62,13 @@
         </div>
         <div class="content">
           <img src="/assets/cb2.jpg" height="250px" width="280px">
-          <h3>Name of Dish</h3>
-          <p>short writeup about it</p>
+          <h3>Tofu <i>egg</i> and Hash browns</h3>
+          <p>Learn how to cook this simple dish! Add hot sauce to spice it up!</p>
         </div>
         <div class="content">
           <img src="/assets/cb3.jpg" height="250px" width="280px">
-          <h3>Name of Dish</h3>
-          <p>short writeup about it</p>
+          <h3>Whole-grain waffles and <i>sausage</i></h3>
+          <p>Cook with a lot of love in a couple of minutes!</p>
         </div>
         <div class="right arrow row centered" onclick="changeSlide1(1)">
           <i class="material-icons">
@@ -88,18 +88,18 @@
         </div>
         <div class="content">
           <img src="/assets/cl1.jpg" height="280px" width="250px">
-          <h3>name of dish</h3>
-          <p>short write up</p>
+          <h3>Tomato and Basil Soup</h3>
+          <p>YUM! A protein-packed meal full of veggies that will full you up.</p>
         </div>
         <div class="content">
           <img src="/assets/cl2.jpg" height="250px" width="280px">
-          <h3></h3>
-          <p></p>
+          <h3><i>Cheesy</i> Pinto Bean tacos</h3>
+          <p>Enjoy this filling meal - protein-rich beans, dairy-free sour cream, whole-grain brown rice, and cheesy Daiya cheddar-style shreds!</p>
         </div>
         <div class="content">
           <img src="/assets/cl3.jpg" height="250px" width="280px">
-          <h3></h3>
-          <p></p>
+          <h3><i>Turk'y</i> Sandwich with Sprouts and Avocado</h3>
+          <p>Delicious sandwhich in a matter of minutes!</p>
         </div>
         <div class="right arrow row centered" onclick="changeSlide1(1)">
           <i class="material-icons">
@@ -119,18 +119,18 @@
         </div>
         <div class="content">
           <img src="/assets/cd1.jpg" height="250px" width="280px">
-          <h3>Name of Dish</h3>
-          <p>short writeup about it</p>
+          <h3>Stuffed Baked Potato and Salad</h3>
+          <p>This potato and salad will make you satisfied without feeling stuffed.</p>
         </div>
         <div class="content">
           <img src="/assets/cd2.jpg" height="250px" width="280px">
-          <h3></h3>
-          <p></p>
+          <h3>Spaghetti with <i>meat</i>balls</h3>
+          <p>This is a classic! Grab your spaghetti-twirling fork and go for it!</p>
         </div>
         <div class="content">
           <img src="/assets/cd3.jpg" height="250px" width="280px">
-          <h3></h3>
-          <p></p>
+          <h3>Avocado burger with Sweet Potato Fries</h3>
+          <p>No need for an introduction! Stacked high with fresh and nourishing ingredients.</p>
         </div>
         <div class="right arrow row centered" onclick="changeSlide1(1)">
           <i class="material-icons">
@@ -143,7 +143,7 @@
     <div class="section row vertically-centered space-around off-white-bg full-width no-margin">
       <div class="left column">
         <h1>It Just Got Easier</h1>
-        <h4>Planning your supermarketing has never been easier. Write down what you need to buy so it's ready for your next trip to the grocers!
+        <h4>Planning your supermarket-ing has never been easier. Write down what you need to buy so it's ready for your next trip to the grocery store!
         </h4>
         <div class="button green" onclick={ groList }>Create your grocery list</div>
       </div>
