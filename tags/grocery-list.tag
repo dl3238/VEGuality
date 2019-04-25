@@ -87,7 +87,11 @@
 			for (doneTodo of doneItems) {
 				// DATABASE DELETE
 				groceryRef.doc(itemID).delete();
-			}
+			};
+
+      this.list = this.list.filter(todo => !todo.done);
+      this.update();
+
    }
 
 
