@@ -18,9 +18,9 @@
       <div style="padding-top:20px;"class="links row vertically-centered">
         <a class="row vertically-centered" href="#">SWITCH</a>
         <a class="row vertically-centered" href="cook.html">COOK</a>
-        <a class="row vertically-centered" href="#">EXPLORE</a>
-        <a class="row vertically-centered" href="#">INSPIRE</a>
-        <a class="row vertically-centered" href="#">LAUGH</a>
+        <a class="row vertically-centered" href="explore.html">EXPLORE</a>
+        <a class="row vertically-centered" href="inspire.html">INSPIRE</a>
+        <a class="row vertically-centered" href="#">CONNECT</a>
       </div>
       <div style="margin-top:20px;" show={ !user } class="button call-to-action rounded green" onclick={ login }>Join the Community</div>
       <div style="margin-top:20px;" show={ user } class="button call-to-action rounded green" onclick={ logout }>Logout</div>
@@ -52,12 +52,12 @@
           </i>
         </div>
         <div class="content">
-          <img src="/assets/m1.jpeg" height="250px" width="280px">
+          <img src="/assets/m1.jpg" height="300px" width="280px">
           <h3></h3>
           <p></p>
         </div>
         <div class="content">
-          <img src="/assets/m2.jpeg" height="250px" width="280px">
+          <img src="/assets/m2.jpeg" height="300px" width="280px">
           <h3></h3>
           <p></p>
         </div>
@@ -107,7 +107,7 @@
     <div class="section row no-padding centered">
       <div class="left image-stacked">
         <img src="/assets/s4.jpg" height="200px" width="300px">
-        <img src="/assets/s4p2.jpg" height="300px" width="200px">
+        <img src="/assets/s4p2.jpg" height="300px" width="280px">
       </div>
       <div class="right">
         <h1>Practice Patience</h1>
@@ -118,57 +118,6 @@
     <script src="js/switch-carousel-1.js"></script>
     <script src="js/switch-carousel-2.js"></script>
 
-    <div class="section column centered">
-      <h1>Same but Better</h1>
-      <p>Worried you’ll miss meat? Not to fear: There are juicy plant-based meats waiting in the produce and freezer sections of your local supermarket. Just warm and serve them in minutes. You’ll see why Bill Gates, Google, and major food companies have
-        declared that the future of meat is plant-based.</p>
-      <div class="carousel row centered" id="carousel-switch-2">
-        <div class="left arrow row centered" onclick="changeSlide2(-1)">
-          <i class="material-icons">
-            keyboard_arrow_left
-          </i>
-        </div>
-        <div class="content">
-          <img src="/assets/switchsb1.jpg" height="250px" width="320px">
-          <h3></h3>
-          <p></p>
-          <a href="#" class="button green">Add to Grocery List</a>
-        </div>
-        <div class="content">
-          <img src="/assets/switchsb2.jpg" height="250px" width="320px">
-          <h3></h3>
-          <p></p>
-          <a href="#" class="button green">Add to Grocery List</a>
-        </div>
-        <div class="right arrow row centered" onclick="changeSlide2(1)">
-          <i class="material-icons">
-            keyboard_arrow_right
-          </i>
-        </div>
-      </div>
-    </div>
-    <div class="section pink-bg row reversed centered overlapped one-third full-width">
-      <div class="right column vertically-centered">
-        <h1>Do It for Yourself</h1>
-        <h3>Pledge to try plant-based eating!</h3>
-        <p>The best way to make a positive change is to commit yourself to it. So why wait? Pledge now to try plant-based eating and use the free tools on ChooseVeg to help you stick with it. Click “Get the Guide Now” to download our free Vegetarian Starter
-          Guide!</p>
-        <div class="button green">
-          Get the Guide Now
-          <i class="material-icons">
-            keyboard_arrow_right
-          </i>
-        </div>
-      </div>
-      <div style="margin-right:30px;"class="left">
-        <img src="/assets/switchguide.png" height="400px" width="300px">
-      </div>
-    </div>
-    <div class="section no-margin no-padding full-width row centered">
-      <img src="/assets/switchend1.jpg" height="250px" width="320px">
-      <img src="/assets/switchend2.jpg" height="250px" width="320px">
-      <img src="/assets/switchend3.jpg" height="250px" width="320px">
-    </div>
 
   </body>
 
@@ -191,6 +140,103 @@
       }
       this.update();
     });
+
+//carousel
+    var currentSlide1 = 0;
+    var slides1 = [
+        {
+            left: {
+                image: "https://via.placeholder.com/320x250",
+                title: "Convenience in a Can 1",
+                content: "Pack your cupboard with black beans, lentils, vegetarian chili, and savory soups for satisfying plant-based protein."
+            },
+            right: {
+                image: "https://via.placeholder.com/320x250",
+                title: "Convenience in a Can 2",
+                content: "Pack your cupboard with black beans, lentils, vegetarian chili, and savory soups for satisfying plant-based protein."
+            }
+        },
+        {
+            left: {
+                image: "https://via.placeholder.com/320x250",
+                title: "Convenience in a Can 3",
+                content: "Pack your cupboard with black beans, lentils, vegetarian chili, and savory soups for satisfying plant-based protein."
+            },
+            right: {
+                image: "https://via.placeholder.com/320x250",
+                title: "Convenience in a Can 4",
+                content: "Pack your cupboard with black beans, lentils, vegetarian chili, and savory soups for satisfying plant-based protein."
+            }
+        },
+        {
+            left: {
+                image: "https://via.placeholder.com/320x250",
+                title: "Convenience in a Can 5",
+                content: "Pack your cupboard with black beans, lentils, vegetarian chili, and savory soups for satisfying plant-based protein."
+            },
+            right: {
+                image: "https://via.placeholder.com/320x250",
+                title: "Convenience in a Can 6",
+                content: "Pack your cupboard with black beans, lentils, vegetarian chili, and savory soups for satisfying plant-based protein."
+            }
+        }
+    ];
+
+    function initialiseCarousel1() {
+        // for carousel 1
+        var carousel = document.getElementById("carousel-switch-1");
+        if (carousel != undefined) {
+            var leftContent = carousel.getElementsByClassName("content")[0];
+            var rightContent = carousel.getElementsByClassName("content")[1];
+            leftContent.children[0].setAttribute("src", slides1[currentSlide1].left.image);
+            leftContent.children[1].innerText = slides1[currentSlide1].left.title;
+            leftContent.children[2].innerText = slides1[currentSlide1].left.content;
+            rightContent.children[0].setAttribute("src", slides1[currentSlide1].right.image);
+            rightContent.children[1].innerText = slides1[currentSlide1].right.title;
+            rightContent.children[2].innerText = slides1[currentSlide1].right.content;
+        }
+    }
+
+    function changeSlide1(increment) {
+        if (increment > 0) {
+            if (currentSlide1 >= slides1.length - 1) {
+                currentSlide1 = 0;
+            } else {
+                currentSlide1++;
+            }
+        } else {
+            if (currentSlide1 <= 0) {
+                currentSlide1 = slides1.length - 1;
+            } else {
+                currentSlide1--;
+            }
+        }
+        var carousel = document.getElementById("carousel-switch-1");
+        var leftContent = carousel.getElementsByClassName("content")[0];
+        var rightContent = carousel.getElementsByClassName("content")[1];
+        if (slides1[currentSlide1].left != undefined) {
+            leftContent.children[0].setAttribute("src", slides1[currentSlide1].left.image);
+            leftContent.children[1].innerText = slides1[currentSlide1].left.title;
+            leftContent.children[2].innerText = slides1[currentSlide1].left.content;
+        } else {
+            leftContent.children[0].setAttribute("src", "");
+            leftContent.children[1].innerText = "";
+            leftContent.children[2].innerText = "";
+        }
+
+        if (slides1[currentSlide1].right != undefined) {
+            rightContent.children[0].setAttribute("src", slides1[currentSlide1].right.image);
+            rightContent.children[1].innerText = slides1[currentSlide1].right.title;
+            rightContent.children[2].innerText = slides1[currentSlide1].right.content;
+        } else {
+            rightContent.children[0].setAttribute("src", "");
+            rightContent.children[1].innerText = "";
+            rightContent.children[2].innerText = "";
+        }
+    }
+
+    initialiseCarousel1();
+
   </script>
 
 </switch>

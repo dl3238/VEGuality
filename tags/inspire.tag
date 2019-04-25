@@ -16,14 +16,14 @@
       </div>
       <div style="padding-top:20px;" class="links row vertically-centered">
         <a class="row vertically-centered" href="switch.html">SWITCH</a>
-        <a class="row vertically-centered" href="#">COOK</a>
-        <a class="row vertically-centered" href="#">EXPLORE</a>
-        <a class="row vertically-centered" href="#">INSPIRE</a>
-        <a class="row vertically-centered" href="#">LAUGH</a>
+        <a class="row vertically-centered" href="cook.html">COOK</a>
+        <a class="row vertically-centered" href="explore.html">EXPLORE</a>
+        <a class="row vertically-centered" href="inspire.html">INSPIRE</a>
+        <a class="row vertically-centered" href="#">CONNECT</a>
       </div>
       <div style="margin-top:20px;" show={ !user } class="button call-to-action rounded green" onclick={ login }>Join the Community</div>
       <div style="margin-top:20px;" show={ user } class="button call-to-action rounded green" onclick={ logout }>Logout</div>
-      <div style="margin-left:10px;margin-top:20px;" show={ user } class="button call-to-action rounded green" onclick={ }>Profile</div>
+      <a href="profile.html"><div style="margin-left:10px;margin-top:20px;" show={ user } class="button call-to-action rounded green">Profile</div></a>
     </nav>
 
     <div class="header">
@@ -80,7 +80,7 @@
         </div>
         <div class="row full-width mt-30 between vertically-centered space-around">
             <div class="bg">
-                <h3>Share your story with the ChooseVeg community and help inspire others!</h3>
+                <h3>Share your story with the VEGuality community and help inspire others!</h3>
                 <div class="button call-to-action green">Share your story</div>
             </div>
         </div>
@@ -117,8 +117,6 @@
             </div>
         </div>
     </div>
-
-
 
     <div class="section column centered">
         <h1>How to Talk With Others</h1>
@@ -199,101 +197,121 @@
 
 
 
-    <script>
-    var currentSlide1 = 0;
-    var slides1 = [
-        {
-            left: {
-                image: "https://via.placeholder.com/320x250",
-                title: "Mercy for Animals",
-                content: "A compelling look at animal welfare and factory farming in the United States by Nathan Runkle, the founder of Mercy For Animals"
-            },
-            right: {
-                image: "https://via.placeholder.com/320x250",
-                title: "Forks over Knives",
-                content: "Pack your cupboard with black beans, lentils, vegetarian chili, and savory soups for satisfying plant-based protein."
-            }
-        },
-        {
-            left: {
-                image: "https://via.placeholder.com/320x250",
-                title: "What a Fish Knows",
-                content: "Pack your cupboard with black beans, lentils, vegetarian chili, and savory soups for satisfying plant-based protein."
-            },
-            right: {
-                image: "https://via.placeholder.com/320x250",
-                title: "How Not to Die",
-                content: "Pack your cupboard with black beans, lentils, vegetarian chili, and savory soups for satisfying plant-based protein."
-            }
-        },
-        {
-            left: {
-                image: "https://via.placeholder.com/320x250",
-                title: "The Enginge 2 Diet",
-                content: "Pack your cupboard with black beans, lentils, vegetarian chili, and savory soups for satisfying plant-based protein."
-            },
-            right: {
-                image: "https://via.placeholder.com/320x250",
-                title: "What the Health",
-                content: "Pack your cupboard with black beans, lentils, vegetarian chili, and savory soups for satisfying plant-based protein."
-            }
-        }
-    ];
+  <script>
 
-    function initialiseCarousel1() {
-        // for carousel 1
-        var carousel = document.getElementById("carousel-inspire-1");
-        if (carousel != undefined) {
-            var leftContent = carousel.getElementsByClassName("content")[0];
-            var rightContent = carousel.getElementsByClassName("content")[1];
-            leftContent.children[0].setAttribute("src", slides1[currentSlide1].left.image);
-            leftContent.children[1].innerText = slides1[currentSlide1].left.title;
-            leftContent.children[2].innerText = slides1[currentSlide1].left.content;
-            rightContent.children[0].setAttribute("src", slides1[currentSlide1].right.image);
-            rightContent.children[1].innerText = slides1[currentSlide1].right.title;
-            rightContent.children[2].innerText = slides1[currentSlide1].right.content;
-        }
-    }
-
-    function changeSlide1(increment) {
-        if (increment > 0) {
-            if (currentSlide1 >= slides1.length - 1) {
-                currentSlide1 = 0;
-            } else {
-                currentSlide1++;
-            }
+      //login
+      login() {
+        var provider = new firebase.auth.GoogleAuthProvider();
+        firebase.auth().signInWithPopup(provider);
+      };
+      //logout
+      logout() {
+        firebase.auth().signOut();
+      };
+      //change view of buttons
+      firebase.auth().onAuthStateChanged(userObj => {
+        if (userObj) {
+          this.user = userObj;
         } else {
-            if (currentSlide1 <= 0) {
-                currentSlide1 = slides1.length - 1;
-            } else {
-                currentSlide1--;
-            }
+          this.user = null;
         }
-        var carousel = document.getElementById("carousel-inspire-1");
-        var leftContent = carousel.getElementsByClassName("content")[0];
-        var rightContent = carousel.getElementsByClassName("content")[1];
-        if (slides1[currentSlide1].left != undefined) {
-            leftContent.children[0].setAttribute("src", slides1[currentSlide1].left.image);
-            leftContent.children[1].innerText = slides1[currentSlide1].left.title;
-            leftContent.children[2].innerText = slides1[currentSlide1].left.content;
-        } else {
-            leftContent.children[0].setAttribute("src", "");
-            leftContent.children[1].innerText = "";
-            leftContent.children[2].innerText = "";
-        }
+        this.update();
+      });
+    //carousel
+      var currentSlide1 = 0;
+      var slides1 = [
+          {
+              left: {
+                  image: "https://via.placeholder.com/320x250",
+                  title: "Mercy for Animals",
+                  content: "A compelling look at animal welfare and factory farming in the United States by Nathan Runkle, the founder of Mercy For Animals"
+              },
+              right: {
+                  image: "https://via.placeholder.com/320x250",
+                  title: "Forks over Knives",
+                  content: "Pack your cupboard with black beans, lentils, vegetarian chili, and savory soups for satisfying plant-based protein."
+              }
+          },
+          {
+              left: {
+                  image: "https://via.placeholder.com/320x250",
+                  title: "What a Fish Knows",
+                  content: "Pack your cupboard with black beans, lentils, vegetarian chili, and savory soups for satisfying plant-based protein."
+              },
+              right: {
+                  image: "https://via.placeholder.com/320x250",
+                  title: "How Not to Die",
+                  content: "Pack your cupboard with black beans, lentils, vegetarian chili, and savory soups for satisfying plant-based protein."
+              }
+          },
+          {
+              left: {
+                  image: "https://via.placeholder.com/320x250",
+                  title: "The Enginge 2 Diet",
+                  content: "Pack your cupboard with black beans, lentils, vegetarian chili, and savory soups for satisfying plant-based protein."
+              },
+              right: {
+                  image: "https://via.placeholder.com/320x250",
+                  title: "What the Health",
+                  content: "Pack your cupboard with black beans, lentils, vegetarian chili, and savory soups for satisfying plant-based protein."
+              }
+          }
+      ];
 
-        if (slides1[currentSlide1].right != undefined) {
-            rightContent.children[0].setAttribute("src", slides1[currentSlide1].right.image);
-            rightContent.children[1].innerText = slides1[currentSlide1].right.title;
-            rightContent.children[2].innerText = slides1[currentSlide1].right.content;
-        } else {
-            rightContent.children[0].setAttribute("src", "");
-            rightContent.children[1].innerText = "";
-            rightContent.children[2].innerText = "";
-        }
-    }
+      function initialiseCarousel1() {
+          // for carousel 1
+          var carousel = document.getElementById("carousel-inspire-1");
+          if (carousel != undefined) {
+              var leftContent = carousel.getElementsByClassName("content")[0];
+              var rightContent = carousel.getElementsByClassName("content")[1];
+              leftContent.children[0].setAttribute("src", slides1[currentSlide1].left.image);
+              leftContent.children[1].innerText = slides1[currentSlide1].left.title;
+              leftContent.children[2].innerText = slides1[currentSlide1].left.content;
+              rightContent.children[0].setAttribute("src", slides1[currentSlide1].right.image);
+              rightContent.children[1].innerText = slides1[currentSlide1].right.title;
+              rightContent.children[2].innerText = slides1[currentSlide1].right.content;
+          }
+      };
 
-    initialiseCarousel1();
-    </script>
+      function changeSlide1(increment) {
+          if (increment > 0) {
+              if (currentSlide1 >= slides1.length - 1) {
+                  currentSlide1 = 0;
+              } else {
+                  currentSlide1++;
+              }
+          } else {
+              if (currentSlide1 <= 0) {
+                  currentSlide1 = slides1.length - 1;
+              } else {
+                  currentSlide1--;
+              }
+          }
+          var carousel = document.getElementById("carousel-inspire-1");
+          var leftContent = carousel.getElementsByClassName("content")[0];
+          var rightContent = carousel.getElementsByClassName("content")[1];
+          if (slides1[currentSlide1].left != undefined) {
+              leftContent.children[0].setAttribute("src", slides1[currentSlide1].left.image);
+              leftContent.children[1].innerText = slides1[currentSlide1].left.title;
+              leftContent.children[2].innerText = slides1[currentSlide1].left.content;
+          } else {
+              leftContent.children[0].setAttribute("src", "");
+              leftContent.children[1].innerText = "";
+              leftContent.children[2].innerText = "";
+          }
 
-  </inspire>
+          if (slides1[currentSlide1].right != undefined) {
+              rightContent.children[0].setAttribute("src", slides1[currentSlide1].right.image);
+              rightContent.children[1].innerText = slides1[currentSlide1].right.title;
+              rightContent.children[2].innerText = slides1[currentSlide1].right.content;
+          } else {
+              rightContent.children[0].setAttribute("src", "");
+              rightContent.children[1].innerText = "";
+              rightContent.children[2].innerText = "";
+          }
+      };
+
+      initialiseCarousel1();
+  </script>
+
+</inspire>

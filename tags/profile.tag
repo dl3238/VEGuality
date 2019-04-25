@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="/css/styles.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+
   </head>
 
   <body class="no-margin">
@@ -16,26 +18,50 @@
         <a href="/"><img style="margin-top:20px;width:30%;" src="/assets/logo.png"/></a>
 
       </div>
-      <div style="padding-top:20px;"class="links row vertically-centered">
+      <div style="padding-top:20px;" class="links row vertically-centered">
         <a class="row vertically-centered" href="switch.html">SWITCH</a>
         <a class="row vertically-centered" href="cook.html">COOK</a>
-        <a class="row vertically-centered" href="#">EXPLORE</a>
-        <a class="row vertically-centered" href="#">INSPIRE</a>
-        <a class="row vertically-centered" href="#">LAUGH</a>
+        <a class="row vertically-centered" href="explore.html">EXPLORE</a>
+        <a class="row vertically-centered" href="inspire.html">INSPIRE</a>
+        <a class="row vertically-centered" href="#">CONNECT</a>
       </div>
       <div style="margin-top:20px;" show={ !user } class="button call-to-action rounded green" onclick={ login }>Join the Community</div>
       <div style="margin-top:20px;" show={ user } class="button call-to-action rounded green" onclick={ logout }>Logout</div>
       <div style="margin-left:10px;margin-top:20px;" show={ user } class="button call-to-action rounded green" onclick={ }>Profile</div>
     </nav>
 
-    <div class="container">
+    <div style="margin-top:120px;" class="container">
       <div class="row">
-        <div class="col-4">
+        <div class="d-flex flex-column col-4">
+          <div class="card" style="width: 20rem;">
+            <img src="/assets/avatar.png" style="width:85%;" class="card-img-top" alt="avatar">
+            <div class="card-body">
+              <h5 class="card-title">Kalen Venus</h5>
+              <p class="card-text">Reading the stories on the site, I became inspired to share my story.</p>
+
+              <!-- <p class="card-text">Reading the stories on the site, I became inspired to share my story. I come from a family that enjoys eating meat and wearing fur. I never felt I could identify with my family members, but I had to live a life to feel belonged and not judged. For most of my life, I felt alone and not supported. It was not until my freshman year of high school when I realized there were people like me who did not believe in animal cruelty in all facets of their lives. I confided in my teacher how I was feeling, and she recommended me to go to a Vegan festival right here in my city. When I went, my life changed and my values were reinforced. I no longer wanted to live a lie and wanted to openly be a part of this movement. At the festival, I got the opportunity to sample amazing vegan food, make new friends, and listen to some of the vegan world’s most prominent speakers. I am slowly transitiong, and my parents are still processing it...heck, I am still processing it, but I know I am making the right decision for myself. I hope you follow me on my vegan journey.</p> -->
+              <a href="#">Edit profile</a>
+            </div>
+          </div>
+          <!--Tab Bar-->
+          <div style="margin-right:;margin-top:20px; border:solid; border-color:#1abc9c; border-width:1px;border-radius:1rem;"class="">
+            <ul class="nav nav-list">
+              <li><a href="#">My grocery list</a> </li>
+              <li><a href="#">My posts</a> </li>
+              <li><a href="#">My stories</a> </li>
+            </ul>
+          </div>
+        </div>
+
+        <div style="margin-left:100px;"class="col-8">
+
+          <grocery-list></grocery-list>
 
         </div>
-        <div class="col-8">
 
-        </div>
+
+
+
 
       </div>
 
@@ -43,6 +69,13 @@
   </body>
 
   <script>
+    //setup references to firebase
+    // let database = firebase.firestore();
+    //
+    // let usersRef = database.collection('users');
+    // let userKey = firebase.auth().currentUser.uid;
+    // let groceryRef = database.doc('users/' + userKey).collection('groceryList');
+
     //login
     login() {
       var provider = new firebase.auth.GoogleAuthProvider();
