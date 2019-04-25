@@ -4,15 +4,16 @@
     <form class="">
       <input ref="input" type="text" name="item" placeholder="item" onchange={ inputItem }>
       <button type="button" onclick= { add }>Add to list</button>
+      <button type="button" disabled={ list.filter(onlyDone).length == 0 } onclick={ removeDone }>
+			Remove{ list.filter(onlyDone).length }
+		</button>
     </form>
   </div>
-  <div style="border:solid;"class="">
-    <h1>123</h1>
-
+  <div style="margin-top:30px;"class="">
       <ul>
         <li each= { todo in list.filter(whatShow) }>
           <label class={ completed: todo.done }>
-            <input type="checkbox" chekced = { todo.done } onclick = { toggle }>
+            <input type="checkbox" checked = { todo.done } onclick = { parent.toggle }>
             {todo.title}
           </label>
         </li>
@@ -42,6 +43,7 @@
       this.item = e.currentTarget.value;
     };
 
+  //add todo and write to db
     add(e) {
       //database write preparation
       let userKey = firebase.auth().currentUser.uid;
@@ -72,21 +74,69 @@
       this.item = this.refs.input.value = '';
      }
      event.preventDefault();
-    }
+   };
+
+   //remove todo and delete from db
+   removeDone(event) {
+     let doneItems = this.list.filter(todo => todo.done);
+     //database write preparation
+     let userKey = firebase.auth().currentUser.uid;
+     let groceryRef = database.doc('users/' + userKey).collection('groceryList');
+     let itemID = groceryRef.doc().id;
+
+			for (doneTodo of doneItems) {
+				// DATABASE DELETE
+				groceryRef.doc(itemID).delete();
+			}
+   }
+
 
     toggle(event) {
-
+      let item = event.item.todo;
+			item.done = !item.done;
+      //database write preparation
+      let userKey = firebase.auth().currentUser.uid;
+      let groceryRef = database.doc('users/' + userKey).collection('groceryList');
+      let itemID = groceryRef.doc().id;
+      console.log(itemID);
+			groceryRef.doc(itemID).update({
+				done: item.done
+			});
+			return true;
     };
 
     whatShow(item) {
 			return !item.hidden;
 		}
 
+    onlyDone(item) {
+			return item.done;
+		}
+
+    // LIFECYCLE EVENTS ---------------------------------------
+
+		let stopListening;
+
+		this.on('mount', () => {
+      //database write preparation
+      let userKey = firebase.auth().currentUser.uid;
+      let groceryRef = database.doc('users/' + userKey).collection('groceryList');
+			// DATABASE READ LIVE
+			stopListening = groceryRef.orderBy('timestamp', 'desc').onSnapshot(snapshot => {
+				this.list = snapshot.docs.map(doc => doc.data());
+				this.update();
+			});
+		});
+
+		this.on('unmount', () => {
+			stopListening();
+		});
+
 
   </script>
 
   <style>
-   .compelted {
+   .completed {
      text-decoration: line-through;
      color:#ccc;
    }
