@@ -9,22 +9,19 @@
   <body class="no-margin">
     <nav class="row centered">
       <div class="logo">
-        <img style="margin-top:20px;width:30%;" src="/assets/logo.png"/>
+        <a href="/"><img style="margin-top:20px;width:30%;" src="/assets/logo.png"/></a>
       </div>
       <div class="links row vertically-centered">
-        <a class="row vertically-centered" href="#">SWITCH</a>
-        <a class="row vertically-centered" href="#">COOK</a>
+        <a class="row vertically-centered" href="switch.html">SWITCH</a>
+        <a class="row vertically-centered" href="cook.html">COOK</a>
         <a class="row vertically-centered" href="#">EXPLORE</a>
         <a class="row vertically-centered" href="#">INSPIRE</a>
         <a class="row vertically-centered" href="#">LAUGH</a>
       </div>
       <div style="margin-top:20px;" show={ !user } class="button call-to-action rounded green" onclick={ login }>Join the Community</div>
       <div style="margin-top:20px;" show={ user } class="button call-to-action rounded green" onclick={ logout }>Logout</div>
-      <div style="margin-top:20px;" class="button">
-        <i class="material-icons">
-          shopping_cart
-        </i>
-      </div>
+      <a href="profile.html"><div style="margin-left:10px;margin-top:20px;" show={ user } class="button call-to-action rounded green">Profile</div></a>
+
     </nav>
     <div class="header">
       <div class="home bg row vertically-centered space-around">
@@ -139,4 +136,29 @@
       </div>
     </div>
     //text area here Tips from the community.
-  </explore>
+
+
+  <script>
+      //login
+      login() {
+        var provider = new firebase.auth.GoogleAuthProvider();
+        firebase.auth().signInWithPopup(provider);
+      };
+      //logout
+      logout() {
+        firebase.auth().signOut();
+      };
+      //change view of buttons
+      firebase.auth().onAuthStateChanged(userObj => {
+        if (userObj) {
+          this.user = userObj;
+          console.log(this.user);
+        } else {
+          this.user = null;
+        }
+        this.update();
+      });
+
+  </script>
+
+</explore>

@@ -21,7 +21,7 @@
       <div style="padding-top:20px;" class="links row vertically-centered">
         <a class="row vertically-centered" href="switch.html">SWITCH</a>
         <a class="row vertically-centered" href="cook.html">COOK</a>
-        <a class="row vertically-centered" href="#">EXPLORE</a>
+        <a class="row vertically-centered" href="explore.html">EXPLORE</a>
         <a class="row vertically-centered" href="#">INSPIRE</a>
         <a class="row vertically-centered" href="#">LAUGH</a>
       </div>
@@ -52,7 +52,7 @@
         </div>
 
         <div style="margin-left:100px;"class="col-8">
-          
+
           <grocery-list></grocery-list>
 
         </div>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>TITLE</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  </head>
+
+  <body>
+
+    <!-- MOUNT POINT -->
+    <explore></explore>
+
+
+
+  </body>
+
+  <!-- TAGS -->
+
+  <script src="/tags/explore.tag" type="riot/tag"></script>
+
+
+  <!-- LOAD JQuery, Bootstrap, Riot, Firebase -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/riot/3.10.3/riot+compiler.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+  <script>
+
+  // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDqewZZbEj_KuIsGO8AS4TCw3KPoNHkMDc",
+      authDomain: "final-project-a7c3f.firebaseapp.com",
+      databaseURL: "https://final-project-a7c3f.firebaseio.com",
+      projectId: "final-project-a7c3f",
+      storageBucket: "final-project-a7c3f.appspot.com",
+      messagingSenderId: "470095130670"
+    };
+    firebase.initializeApp(config);
+
+
+    // INITIALIZE RIOT
+    riot.mount('explore');
+  </script>
+
+</html>
