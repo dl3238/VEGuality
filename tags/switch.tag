@@ -20,7 +20,7 @@
         <a class="row vertically-centered" href="cook.html">COOK</a>
         <a class="row vertically-centered" href="#">EXPLORE</a>
         <a class="row vertically-centered" href="#">INSPIRE</a>
-        <a class="row vertically-centered" href="#">LAUGH</a>
+        <a class="row vertically-centered" href="#">CONNECT</a>
       </div>
       <div style="margin-top:20px;" show={ !user } class="button call-to-action rounded green" onclick={ login }>Join the Community</div>
       <div style="margin-top:20px;" show={ user } class="button call-to-action rounded green" onclick={ logout }>Logout</div>
@@ -52,12 +52,12 @@
           </i>
         </div>
         <div class="content">
-          <img src="/assets/m1.jpeg" height="250px" width="280px">
+          <img src="/assets/m1.jpg" height="300px" width="280px">
           <h3></h3>
           <p></p>
         </div>
         <div class="content">
-          <img src="/assets/m2.jpeg" height="250px" width="280px">
+          <img src="/assets/m2.jpeg" height="300px" width="280px">
           <h3></h3>
           <p></p>
         </div>
@@ -140,6 +140,103 @@
       }
       this.update();
     });
+
+//carousel
+    var currentSlide1 = 0;
+    var slides1 = [
+        {
+            left: {
+                image: "https://via.placeholder.com/320x250",
+                title: "Convenience in a Can 1",
+                content: "Pack your cupboard with black beans, lentils, vegetarian chili, and savory soups for satisfying plant-based protein."
+            },
+            right: {
+                image: "https://via.placeholder.com/320x250",
+                title: "Convenience in a Can 2",
+                content: "Pack your cupboard with black beans, lentils, vegetarian chili, and savory soups for satisfying plant-based protein."
+            }
+        },
+        {
+            left: {
+                image: "https://via.placeholder.com/320x250",
+                title: "Convenience in a Can 3",
+                content: "Pack your cupboard with black beans, lentils, vegetarian chili, and savory soups for satisfying plant-based protein."
+            },
+            right: {
+                image: "https://via.placeholder.com/320x250",
+                title: "Convenience in a Can 4",
+                content: "Pack your cupboard with black beans, lentils, vegetarian chili, and savory soups for satisfying plant-based protein."
+            }
+        },
+        {
+            left: {
+                image: "https://via.placeholder.com/320x250",
+                title: "Convenience in a Can 5",
+                content: "Pack your cupboard with black beans, lentils, vegetarian chili, and savory soups for satisfying plant-based protein."
+            },
+            right: {
+                image: "https://via.placeholder.com/320x250",
+                title: "Convenience in a Can 6",
+                content: "Pack your cupboard with black beans, lentils, vegetarian chili, and savory soups for satisfying plant-based protein."
+            }
+        }
+    ];
+
+    function initialiseCarousel1() {
+        // for carousel 1
+        var carousel = document.getElementById("carousel-switch-1");
+        if (carousel != undefined) {
+            var leftContent = carousel.getElementsByClassName("content")[0];
+            var rightContent = carousel.getElementsByClassName("content")[1];
+            leftContent.children[0].setAttribute("src", slides1[currentSlide1].left.image);
+            leftContent.children[1].innerText = slides1[currentSlide1].left.title;
+            leftContent.children[2].innerText = slides1[currentSlide1].left.content;
+            rightContent.children[0].setAttribute("src", slides1[currentSlide1].right.image);
+            rightContent.children[1].innerText = slides1[currentSlide1].right.title;
+            rightContent.children[2].innerText = slides1[currentSlide1].right.content;
+        }
+    }
+
+    function changeSlide1(increment) {
+        if (increment > 0) {
+            if (currentSlide1 >= slides1.length - 1) {
+                currentSlide1 = 0;
+            } else {
+                currentSlide1++;
+            }
+        } else {
+            if (currentSlide1 <= 0) {
+                currentSlide1 = slides1.length - 1;
+            } else {
+                currentSlide1--;
+            }
+        }
+        var carousel = document.getElementById("carousel-switch-1");
+        var leftContent = carousel.getElementsByClassName("content")[0];
+        var rightContent = carousel.getElementsByClassName("content")[1];
+        if (slides1[currentSlide1].left != undefined) {
+            leftContent.children[0].setAttribute("src", slides1[currentSlide1].left.image);
+            leftContent.children[1].innerText = slides1[currentSlide1].left.title;
+            leftContent.children[2].innerText = slides1[currentSlide1].left.content;
+        } else {
+            leftContent.children[0].setAttribute("src", "");
+            leftContent.children[1].innerText = "";
+            leftContent.children[2].innerText = "";
+        }
+
+        if (slides1[currentSlide1].right != undefined) {
+            rightContent.children[0].setAttribute("src", slides1[currentSlide1].right.image);
+            rightContent.children[1].innerText = slides1[currentSlide1].right.title;
+            rightContent.children[2].innerText = slides1[currentSlide1].right.content;
+        } else {
+            rightContent.children[0].setAttribute("src", "");
+            rightContent.children[1].innerText = "";
+            rightContent.children[2].innerText = "";
+        }
+    }
+
+    initialiseCarousel1();
+
   </script>
 
 </switch>
