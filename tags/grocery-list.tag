@@ -8,7 +8,16 @@
   </div>
   <div style="border:solid;"class="">
     <h1>123</h1>
+    <ul>
+      <li each= { i in list }>
+        <label class={ completed: todo.done }>
+          <input type="checkbox" chekced = { todo.done }>
+        </label>
+      </li>
+    </ul>
   </div>
+
+
 
   <script>
 
@@ -16,12 +25,12 @@
     let database = firebase.firestore();
 
     let usersRef = database.collection('users');
-    
+
     // let userKey = firebase.auth().currentUser.uid;
     // let groceryRef = database.doc('users/' + userKey).collection('groceryList');
 
     this.item = "";
-    this.listItem = [];
+    this.list = [];
 
     inputItem(e) {
       //user input the item
@@ -30,9 +39,17 @@
 
     add(e) {
       //add item to the list array
-     this.listItem.push(this.item);
+     this.list.push(this.item);
     };
 
 
   </script>
+
+  <style>
+   .compelted {
+     text-decoration: line-through;
+     color:#ccc;
+   }
+
+  </style>
 </grocery-list>

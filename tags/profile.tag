@@ -52,7 +52,7 @@
         </div>
 
         <div style="margin-left:100px;"class="col-8">
-          <h1>123</h1>
+          
           <grocery-list></grocery-list>
 
         </div>
