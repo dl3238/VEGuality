@@ -9,11 +9,15 @@
   <div style="border:solid;"class="">
     <h1>123</h1>
 
+      <ul>
+        <li each= { todo in list.filter(whatShow) }>
+          <label class={ completed: todo.done }>
+            <input type="checkbox" chekced = { todo.done } onclick = { toggle }>
+            {todo.title}
+          </label>
+        </li>
+      </ul>
 
-        <label each= { i in list } class={ completed: todo.done }>
-          <input type="checkbox" chekced = { todo.done } onclick = { toggle }>
-          {this.item}
-        </label>
 
 
   </div>
@@ -39,14 +43,21 @@
     };
 
     add(e) {
-      //add item to the list array
-     this.list.push(this.item);
+      //database write preparation
+      let userKey = firebase.auth().currentUser.uid;
+      let groceryRef = database.doc('users/' + userKey).collection('groceryList');
+      let itemID = groceryRef.doc().id;
 
      if (this.item) {
-       //database write preparation
-       let userKey = firebase.auth().currentUser.uid;
-       let groceryRef = database.doc('users/' + userKey).collection('groceryList');
-       let itemID = groceryRef.doc().id;
+      let todo = {
+        title: this.item,
+        done: false,
+        id: itemID,
+        timestamp:firebase.firestore.FieldValue.serverTimestamp()
+      };
+      this.list.push(todo);
+      console.log(this.list);
+      this.update();
 
       //database write
       groceryRef.doc(itemID).set({
@@ -55,7 +66,7 @@
         done: false,
         id: itemID,
         timestamp:firebase.firestore.FieldValue.serverTimestamp()
-        
+
       });
 
       this.item = this.refs.input.value = '';
@@ -66,6 +77,10 @@
     toggle(event) {
 
     };
+
+    whatShow(item) {
+			return !item.hidden;
+		}
 
 
   </script>
