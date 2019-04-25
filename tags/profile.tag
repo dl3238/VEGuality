@@ -33,30 +33,31 @@
     <div style="margin-top:120px;" class="container">
       <div class="row">
         <div class="d-flex flex-column col-4">
-          <div class="card" style="width: 18rem;">
-            <img src="/assets/avatar.png" style="width:70%;" class="card-img-top" alt="avatar">
+          <div class="card" style="width: 20rem;">
+            <img src="/assets/avatar.png" style="width:85%;" class="card-img-top" alt="avatar">
             <div class="card-body">
               <h5 class="card-title">John Smith</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               <a href="#">Edit profile</a>
             </div>
           </div>
-          <div style="margin-right:15px;margin-top:20px; border:solid; border-color:#1abc9c; border-width:1px;border-radius:1rem;"class="">
+          <!--Tab Bar-->
+          <div style="margin-right:;margin-top:20px; border:solid; border-color:#1abc9c; border-width:1px;border-radius:1rem;"class="">
             <ul class="nav nav-list">
               <li><a href="#">My grocery list</a> </li>
               <li><a href="#">My posts</a> </li>
               <li><a href="#">My stories</a> </li>
             </ul>
-
           </div>
-          <!--Tab Bar-->
+        </div>
 
-
-            <div class="col-8">
-
-            </div>
+        <div style="margin-left:100px;"class="col-8">
+          <h1>123</h1>
+          <grocery-list></grocery-list>
 
         </div>
+
+
 
 
 
