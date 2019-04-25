@@ -80,7 +80,7 @@
         </div>
         <div class="row full-width mt-30 between vertically-centered space-around">
             <div class="bg">
-                <h3>Share your story with the ChooseVeg community and help inspire others!</h3>
+                <h3>Share your story with the VEGuality community and help inspire others!</h3>
                 <div class="button call-to-action green">Share your story</div>
             </div>
         </div>
