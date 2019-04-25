@@ -17,7 +17,7 @@
       <div style="padding-top:20px;" class="links row vertically-centered">
         <a class="row vertically-centered" href="HTML/switch.html">SWITCH</a>
         <a class="row vertically-centered" href="HTML/cook.html">COOK</a>
-        <a class="row vertically-centered" href="#">EXPLORE</a>
+        <a class="row vertically-centered" href="HTML/explore.html">EXPLORE</a>
         <a class="row vertically-centered" href="#">INSPIRE</a>
         <a class="row vertically-centered" href="#">CONNECT</a>
       </div>
