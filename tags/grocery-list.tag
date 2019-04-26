@@ -3,7 +3,7 @@
     <h1>Grocery List</h1>
     <form class="">
       <input ref="input" type="text" name="item" placeholder="item" onchange={ inputItem }>
-      <button type="button" onclick= { add } disabled={ !item }>Add to list</button>
+      <button type="button" onclick= { add }>Add to list</button>
       <button type="button" disabled={ list.filter(onlyDone).length == 0 } onclick={ removeDone }>
 			Remove{ list.filter(onlyDone).length }
 		</button>
@@ -31,9 +31,6 @@
 
     let usersRef = database.collection('users');
 
-    // let userKey = firebase.auth().currentUser.uid;
-    // let groceryRef = database.doc('users/' + userKey).collection('groceryList');
-
     this.item = "";
     this.list = [];
 
@@ -50,6 +47,17 @@
       let groceryRef = database.doc('users/' + userKey).collection('groceryList');
       let itemID = groceryRef.doc().id;
 
+      groceryRef.onSnapshot(snapshot => {
+        let listItems = [];
+
+        snapshot.forEach(doc => {
+          listItems.push(doc.data());
+        })
+        console.log(listItems);
+        this.list = listItems;
+        this.update();
+      })
+
      if (this.item) {
       let todo = {
         title: this.item,
@@ -57,7 +65,7 @@
         id: itemID,
         timestamp:firebase.firestore.FieldValue.serverTimestamp()
       };
-      this.list.push(todo);
+      // this.list.push(todo);
       console.log(this.list);
       this.update();
 
@@ -75,6 +83,24 @@
      }
      event.preventDefault();
    };
+
+   // this.on ('mount', () => {
+   //   let userKey = firebase.auth().currentUser.uid;
+   //   let groceryRef = database.doc('users/' + userKey).collection('groceryList');
+   //
+   //   groceryRef.onSnapshot(snapshot => {
+   //     let listItems = [];
+   //
+   //     snapshot.forEach(doc => {
+   //       listItems.push(doc.data(title));
+   //     })
+   //     console.log(listItems);
+   //     this.list = listItems;
+   //     this.update();
+   //   })
+   // })
+
+
 
    //remove todo and delete from db
    removeDone(event) {
@@ -119,22 +145,22 @@
 
     // LIFECYCLE EVENTS ---------------------------------------
 
-		let stopListening;
-
-		this.on('mount', () => {
-      //database write preparation
-      let userKey = firebase.auth().currentUser.uid;
-      let groceryRef = database.doc('users/' + userKey).collection('groceryList');
-			// DATABASE READ LIVE
-			stopListening = groceryRef.orderBy('timestamp', 'desc').onSnapshot(snapshot => {
-				this.list = snapshot.docs.map(doc => doc.data());
-				this.update();
-			});
-		});
-
-		this.on('unmount', () => {
-			stopListening();
-		});
+		// let stopListening;
+    //
+		// this.on('mount', () => {
+    //   //database write preparation
+    //   let userKey = firebase.auth().currentUser.uid;
+    //   let groceryRef = database.doc('users/' + userKey).collection('groceryList');
+		// 	// DATABASE READ LIVE
+		// 	stopListening = groceryRef.orderBy('timestamp', 'desc').onSnapshot(snapshot => {
+		// 		this.list = snapshot.docs.map(doc => doc.data());
+		// 		this.update();
+		// 	});
+		// });
+    //
+		// this.on('unmount', () => {
+		// 	stopListening();
+		// });
 
 
   </script>
