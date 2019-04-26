@@ -30,6 +30,7 @@
     let database = firebase.firestore();
 
     let usersRef = database.collection('users');
+    let userID = firebase.auth().currentUser;
 
     this.item = "";
     this.list = [];
@@ -47,16 +48,16 @@
       let groceryRef = database.doc('users/' + userKey).collection('groceryList');
       let itemID = groceryRef.doc().id;
 
-      groceryRef.onSnapshot(snapshot => {
-        let listItems = [];
-
-        snapshot.forEach(doc => {
-          listItems.push(doc.data());
-        })
-        console.log(listItems);
-        this.list = listItems;
-        this.update();
-      })
+      // groceryRef.onSnapshot(snapshot => {
+      //   let listItems = [];
+      //
+      //   snapshot.forEach(doc => {
+      //     listItems.push(doc.data());
+      //   })
+      //   console.log(listItems);
+      //   this.list = listItems;
+      //   this.update();
+      // })
 
      if (this.item) {
       let todo = {
@@ -65,7 +66,7 @@
         id: itemID,
         timestamp:firebase.firestore.FieldValue.serverTimestamp()
       };
-      // this.list.push(todo);
+      this.list.push(todo);
       console.log(this.list);
       this.update();
 
@@ -84,35 +85,15 @@
      event.preventDefault();
    };
 
-   // this.on ('mount', () => {
-   //   let userKey = firebase.auth().currentUser.uid;
-   //   let groceryRef = database.doc('users/' + userKey).collection('groceryList');
-   //
-   //   groceryRef.onSnapshot(snapshot => {
-   //     let listItems = [];
-   //
-   //     snapshot.forEach(doc => {
-   //       listItems.push(doc.data(title));
-   //     })
-   //     console.log(listItems);
-   //     this.list = listItems;
-   //     this.update();
-   //   })
-   // })
-
-
-
    //remove todo and delete from db
    removeDone(event) {
      let doneItems = this.list.filter(todo => todo.done);
      //database write preparation
      let userKey = firebase.auth().currentUser.uid;
      let groceryRef = database.doc('users/' + userKey).collection('groceryList');
-     let itemID = groceryRef.doc().id;
-
 			for (doneTodo of doneItems) {
 				// DATABASE DELETE
-				groceryRef.doc(itemID).delete();
+				groceryRef.doc(doneTodo.id).delete();
 			};
 
       this.list = this.list.filter(todo => !todo.done);
@@ -161,6 +142,27 @@
 		// this.on('unmount', () => {
 		// 	stopListening();
 		// });
+
+
+    this.on('mount', () => {
+
+        let userKey = firebase.auth().currentUser.uid;
+        let groceryRef = database.doc('users/' + userKey).collection('groceryList');
+
+        groceryRef.onSnapshot(snapshot => {
+          let listItems = [];
+
+          snapshot.forEach(doc => {
+            listItems.push(doc.data());
+            // return doc.data();
+          })
+          this.list = listItems;
+          console.log(this.list)
+          this.update();
+        })
+
+
+    })
 
 
   </script>

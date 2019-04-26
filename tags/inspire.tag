@@ -19,7 +19,7 @@
         <a class="row vertically-centered" href="cook.html">COOK</a>
         <a class="row vertically-centered" href="explore.html">EXPLORE</a>
         <a class="row vertically-centered" href="inspire.html">INSPIRE</a>
-        <a class="row vertically-centered" href="#">CONNECT</a>
+        <a class="row vertically-centered" href="connect.html">CONNECT</a>
       </div>
       <div style="margin-top:20px;" show={ !user } class="button call-to-action rounded green" onclick={ login }>Join the Community</div>
       <div style="margin-top:20px;" show={ user } class="button call-to-action rounded green" onclick={ logout }>Logout</div>
