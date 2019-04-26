@@ -87,7 +87,7 @@
           </i>
         </div>
         <div class="content">
-          <img src="/assets/cl1.jpg" height="280px" width="250px">
+          <img src="/assets/cl1.jpg" height="250px" width="250px">
           <h3>Tomato and Basil Soup</h3>
           <p>YUM! A protein-packed meal full of veggies that will full you up.</p>
         </div>
