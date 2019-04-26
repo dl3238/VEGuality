@@ -70,11 +70,10 @@
 
   <script>
     //setup references to firebase
-    // let database = firebase.firestore();
-    //
-    // let usersRef = database.collection('users');
-    // let userKey = firebase.auth().currentUser.uid;
-    // let groceryRef = database.doc('users/' + userKey).collection('groceryList');
+    let database = firebase.firestore();
+
+    let usersRef = database.collection('users');
+    
 
     //login
     login() {

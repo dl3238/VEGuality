@@ -3,7 +3,7 @@
     <h1>Grocery List</h1>
     <form class="">
       <input ref="input" type="text" name="item" placeholder="item" onchange={ inputItem }>
-      <button type="button" onclick= { add }>Add to list</button>
+      <button type="button" onclick= { add } disabled={ !item }>Add to list</button>
       <button type="button" disabled={ list.filter(onlyDone).length == 0 } onclick={ removeDone }>
 			Remove{ list.filter(onlyDone).length }
 		</button>
@@ -26,7 +26,6 @@
 
 
   <script>
-
     //set up database
     let database = firebase.firestore();
 
@@ -47,6 +46,7 @@
     add(e) {
       //database write preparation
       let userKey = firebase.auth().currentUser.uid;
+      console.log(userKey);
       let groceryRef = database.doc('users/' + userKey).collection('groceryList');
       let itemID = groceryRef.doc().id;
 
