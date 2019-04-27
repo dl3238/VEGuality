@@ -31,10 +31,37 @@
       <div class="connect-bg row vertically-centered space-around">
         <div style="padding-bottom:60px;"class="overlay column centered">
           <h1>Ask your questions</h1>
-          <textarea style="color:black;border:solid;border-width:2px;border-radius:2rem;margin-top:-30px;"name="description" rows="4" cols="60"></textarea>
-
+          <textarea style="color:black;border:solid;border-width:1px;border-radius:1rem;margin-top:-30px;"name="description" rows="4" cols="60"></textarea>
+          <div style="margin-top:20px;" show={ !user } class="button call-to-action rounded green" onclick={ login }>Login to submit</div>
+          <div style="margin-top:20px;" show={ user } class="button call-to-action rounded green" onclick={ logout }>Submit</div>
         </div>
       </div>
+    </div>
+
+    <div style="margin-top:-200px;"class="text-center questionContainer vertically-centered">
+      <div class="overlay column centered question">
+        <h1>This is my first question?</h1>
+        <small>timestamp: </small>
+        <p>comment1</p>
+        <p>comment2</p>
+        <textarea style="color:black;border:solid;border-width:1px;border-radius:1rem;"name="description" rows="2" cols="60"></textarea>
+        <div style="margin-top:20px;" show={ !user } class="button call-to-action rounded green" onclick={ login }>Login to submit</div>
+        <div style="margin-top:20px;" show={ user } class="button call-to-action rounded green" onclick={ logout }>Submit your answer</div>
+      </div>
+      <hr>
+    </div>
+
+    <div class="text-center questionContainer vertically-centered">
+      <div class="overlay column centered question">
+        <h1>This is my first question?</h1>
+        <small>timestamp: </small>
+        <p>comment1</p>
+        <p>comment2</p>
+        <textarea style="color:black;border:solid;border-width:1px;border-radius:1rem;"name="description" rows="2" cols="60"></textarea>
+        <div style="margin-top:20px;" show={ !user } class="button call-to-action rounded green" onclick={ login }>Login to submit</div>
+        <div style="margin-top:20px;" show={ user } class="button call-to-action rounded green" onclick={ logout }>Submit your answer</div>
+      </div>
+      <hr>
     </div>
 
   </body>
@@ -47,6 +74,13 @@
       background-position: center;
       background-repeat: no-repeat;
       background-image: url('https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80');
+    }
+    .questionContainer {
+      margin-top:;
+      border-bottom: :solid;
+      border-color:gray;
+      border-width:1px;
+
     }
   </style>
 
