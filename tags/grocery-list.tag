@@ -44,20 +44,8 @@
     add(e) {
       //database write preparation
       let userKey = firebase.auth().currentUser.uid;
-      console.log(userKey);
       let groceryRef = database.doc('users/' + userKey).collection('groceryList');
       let itemID = groceryRef.doc().id;
-
-      // groceryRef.onSnapshot(snapshot => {
-      //   let listItems = [];
-      //
-      //   snapshot.forEach(doc => {
-      //     listItems.push(doc.data());
-      //   })
-      //   console.log(listItems);
-      //   this.list = listItems;
-      //   this.update();
-      // })
 
      if (this.item) {
       let todo = {

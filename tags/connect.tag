@@ -91,22 +91,51 @@
 
     questionInput(e) {
       this.question = e.currentTarget.value;
-      console.log(this.question);
     };
 
     questionSubmit() {
       let userKey = firebase.auth().currentUser.uid;
       let questionKey = questionsRef.doc().id;
 
-      database.doc('questions/' + questionKey).set({
-        uid: userKey,
-        question: this.question,
-        timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-      });
-      this.questionList.push(this.question);
-      console.log(this.questionList);
-      this.question = this.refs.textarea.value = "";
-    }
+      if (this.question) {
+        let questionItem = {
+          question: this.question,
+          uid: userKey,
+          timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+        };
+        this.questionList.push(questionItem);
+        this.update();
+
+        database.doc('questions/' + questionKey).set({
+          uid: userKey,
+          question: this.question,
+          timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+        });
+        this.question = this.refs.textarea.value = "";
+      }
+      event.preventDefault();
+    };
+
+    //realtime db
+    let connect;
+
+    this.on('mount', () => {
+
+        connect = questionsRef.orderBy('timestamp', 'desc').onSnapshot(snapshot => {
+          let listItems = [];
+
+          snapshot.forEach(doc => {
+            listItems.push(doc.data());
+            // return doc.data();
+          })
+          this.questionList = listItems;
+          this.update();
+        })
+    })
+
+    this.on('unmount', () => {
+      connect();
+    })
 
 
   </script>

@@ -46,16 +46,17 @@
           <!--Tab Bar-->
           <div style="margin-right:;margin-top:20px; border:solid; border-color:#1abc9c; border-width:1px;border-radius:1rem;"class="">
             <ul class="nav nav-list">
-              <li><a href="#">My grocery list</a> </li>
-              <li><a href="#">My posts</a> </li>
-              <li><a href="#">My stories</a> </li>
+              <li><a href="#" onclick={ myList }>My grocery list</a> </li>
+              <li><a href="#" onclick={ myQuestions }>My questions</a> </li>
+              <li><a href="#" onclick={ myStories }>My stories</a> </li>
             </ul>
           </div>
         </div>
 
         <div style="margin-left:100px;"class="col-8">
 
-          <grocery-list show={ user }></grocery-list>
+          <grocery-list if={ mode === "grocery" } show={ user }></grocery-list>
+
 
         </div>
 
@@ -69,12 +70,20 @@
   </body>
 
   <script>
-    //setup references to firebase
-    // let database = firebase.firestore();
+
+    this.mode = "";
+
+    myList() {
+      this.mode = "grocery";
+    };
+
+    // myQuestions() {
+    //   this.mode = "questions";
+    // }
     //
-    // let usersRef = database.collection('users');
-    // let userKey = firebase.auth().currentUser.uid;
-    // let groceryRef = database.doc('users/' + userKey).collection('groceryList');
+    // myStories() {
+    //   this.mode = "stories";
+    // }
 
     //login
     login() {
