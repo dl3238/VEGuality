@@ -31,9 +31,9 @@
       <div class="connect-bg row vertically-centered space-around">
         <div style="padding-bottom:60px;"class="overlay column centered">
           <h1>Ask your questions</h1>
-          <textarea style="color:black;border:solid;border-width:1px;border-radius:1rem;margin-top:-30px;"name="description" rows="4" cols="60"></textarea>
+          <textarea refs="textarea" style="color:black;border:solid;border-width:1px;border-radius:1rem;margin-top:-30px;"name="description" rows="4" cols="60" placeholder="type in your question here" onchange={ questionInput }></textarea>
           <div style="margin-top:20px;" show={ !user } class="button call-to-action rounded green" onclick={ login }>Login to submit</div>
-          <div style="margin-top:20px;" show={ user } class="button call-to-action rounded green" onclick={ logout }>Submit</div>
+          <div style="margin-top:20px;" show={ user } class="button call-to-action rounded green" onclick={ questionSubmit }>Submit</div>
         </div>
       </div>
     </div>
@@ -44,27 +44,72 @@
         <small>timestamp: </small>
         <p>comment1</p>
         <p>comment2</p>
-        <textarea style="color:black;border:solid;border-width:1px;border-radius:1rem;"name="description" rows="2" cols="60"></textarea>
+        <textarea style="color:black;border:solid;border-width:1px;border-radius:1rem;"name="description" rows="2" cols="60" placeholder="type in your answer/comment here"></textarea>
         <div style="margin-top:20px;" show={ !user } class="button call-to-action rounded green" onclick={ login }>Login to submit</div>
-        <div style="margin-top:20px;" show={ user } class="button call-to-action rounded green" onclick={ logout }>Submit your answer</div>
+        <div style="margin-top:20px;" show={ user } class="button call-to-action rounded green" onclick={ answer }>Submit your answer</div>
       </div>
       <hr>
     </div>
 
-    <div class="text-center questionContainer vertically-centered">
-      <div class="overlay column centered question">
-        <h1>This is my first question?</h1>
-        <small>timestamp: </small>
-        <p>comment1</p>
-        <p>comment2</p>
-        <textarea style="color:black;border:solid;border-width:1px;border-radius:1rem;"name="description" rows="2" cols="60"></textarea>
-        <div style="margin-top:20px;" show={ !user } class="button call-to-action rounded green" onclick={ login }>Login to submit</div>
-        <div style="margin-top:20px;" show={ user } class="button call-to-action rounded green" onclick={ logout }>Submit your answer</div>
-      </div>
-      <hr>
-    </div>
+    <question each={ item, i in questionList }></question>
 
   </body>
+
+  <script>
+
+    this.user = "";
+    //login
+    login() {
+      var provider = new firebase.auth.GoogleAuthProvider();
+      firebase.auth().signInWithPopup(provider);
+    };
+    //logout
+    logout() {
+      firebase.auth().signOut();
+      localStorage.removeItem('userKey');
+    };
+    //change view of buttons
+    firebase.auth().onAuthStateChanged(userObj => {
+      if (userObj) {
+        this.user = userObj;
+        console.log(this.user);
+        let userKey = firebase.auth().currentUser.uid;
+        localStorage.setItem('userKey', userKey);
+      } else {
+        this.user = null;
+      }
+      this.update();
+    });
+
+    //database references
+    let database = firebase.firestore();
+    let questionsRef = database.collection('questions');
+    let usersRef = database.collection('users');
+
+    this.question = "";
+    this.questionList = [];
+
+    questionInput(e) {
+      this.question = e.currentTarget.value;
+      console.log(this.question);
+    };
+
+    questionSubmit() {
+      let userKey = firebase.auth().currentUser.uid;
+      let questionKey = questionsRef.doc().id;
+
+      database.doc('questions/' + questionKey).set({
+        uid: userKey,
+        question: this.question,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+      });
+      this.questionList.push(this.question);
+      console.log(this.questionList);
+      this.question = this.refs.textarea.value = "";
+    }
+
+
+  </script>
 
   <style>
     .connect-bg {
@@ -81,41 +126,6 @@
       border-color:gray;
       border-width:1px;
 
-    }
-  </style>
-
-  <script>
-
-    this.user = "";
-    //login
-    login() {
-      var provider = new firebase.auth.GoogleAuthProvider();
-      firebase.auth().signInWithPopup(provider);
-    };
-    //logout
-    logout() {
-      firebase.auth().signOut();
-    };
-    //change view of buttons
-    firebase.auth().onAuthStateChanged(userObj => {
-      if (userObj) {
-        this.user = userObj;
-        console.log(this.user);
-      } else {
-        this.user = null;
-      }
-      this.update();
-    });
-
-
-  </script>
-
-  <style>
-    /* CSS */
-    :scope {}
-    .special {
-      background-color: #333333;
-      color: #FFFFFF;
     }
   </style>
 </connect>

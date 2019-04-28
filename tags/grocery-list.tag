@@ -143,13 +143,14 @@
 		// 	stopListening();
 		// });
 
+    let stopListening;
 
     this.on('mount', () => {
 
-        let userKey = firebase.auth().currentUser.uid;
+        let userKey = localStorage.getItem('userKey')
         let groceryRef = database.doc('users/' + userKey).collection('groceryList');
 
-        groceryRef.onSnapshot(snapshot => {
+        stopListening = groceryRef. orderBy('timestamp', 'desc').onSnapshot(snapshot => {
           let listItems = [];
 
           snapshot.forEach(doc => {
@@ -160,8 +161,10 @@
           console.log(this.list)
           this.update();
         })
+    })
 
-
+    this.on('unmount', () => {
+      stopListening();
     })
 
 

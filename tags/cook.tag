@@ -167,12 +167,15 @@
     //logout
     logout() {
       firebase.auth().signOut();
+      localStorage.removeItem('userKey');
     };
     //change view of buttons
     firebase.auth().onAuthStateChanged(userObj => {
       if (userObj) {
         this.user = userObj;
         console.log(this.user);
+        let userKey = firebase.auth().currentUser.uid;
+        localStorage.setItem('userKey', userKey);
       } else {
         this.user = null;
       }
