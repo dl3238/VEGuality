@@ -55,7 +55,7 @@
 
         <div style="margin-left:100px;"class="col-8">
 
-          <grocery-list></grocery-list>
+          <grocery-list show={ user }></grocery-list>
 
         </div>
 
