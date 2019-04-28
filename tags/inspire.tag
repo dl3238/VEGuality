@@ -81,9 +81,13 @@
         <div class="row full-width mt-30 between vertically-centered space-around">
             <div class="bg">
                 <h3>Share your story with the VEGuality community and help inspire others!</h3>
-                <div class="button call-to-action green">Share your story</div>
+                <div show={ !user } style="width:250px;"class="button call-to-action rounded green" >Login to share</div>
+                <div show={ user } style="width:250px;"class="button call-to-action rounded green" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" >Share your stories</div>
+
             </div>
         </div>
+
+        <!-- Modal -->
         <div class="row fulled p-10 mt-30 vertically-centered space-around">
             <!-- Card 1 -->
             <div class="profile overlapped">
