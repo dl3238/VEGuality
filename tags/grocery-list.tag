@@ -55,7 +55,6 @@
         timestamp:firebase.firestore.FieldValue.serverTimestamp()
       };
       this.list.push(todo);
-      console.log(this.list);
       this.update();
 
       //database write
@@ -97,7 +96,6 @@
       let userKey = firebase.auth().currentUser.uid;
       let groceryRef = database.doc('users/' + userKey).collection('groceryList');
       let itemID = groceryRef.doc().id;
-      console.log(itemID);
 			groceryRef.doc(itemID).update({
 				done: item.done
 			});
