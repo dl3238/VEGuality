@@ -24,7 +24,7 @@
 
     </nav>
     <div class="header">
-      <div class="explore bg row vertically-centered space-around">
+      <div class="home bg row vertically-centered space-around">
         <div class="overlay column centered">
           <h5>VEGANISM IS NOT A DIET</h5>
           <h1>Be kind to all kinds.</h1>

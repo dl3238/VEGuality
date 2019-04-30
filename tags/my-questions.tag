@@ -24,9 +24,6 @@
 
     // refs to db
     let database = firebase.firestore();
-    let usersRef = database.collection('users');
-    let questionsRef = database.collection('questions');
-
     this.questions = [];
 
     //delete question
@@ -34,15 +31,13 @@
 
       let userKey = firebase.auth().currentUser.uid;
       debugger
-      let id = event.item.item.id;
-      debugger
-
       let userQuestions = database.doc('users/' + userKey).collection('questions');
       debugger
+      let questionKey = userQuestions.doc().id;
+      debugger
 
-      userQuestions.doc(id).delete();
-      questionsRef.doc(id).delete();
-      this.update();
+      userQuestions.doc(questionKey).delete();
+      debugger
     }
 
     //realtime db

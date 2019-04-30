@@ -6,6 +6,9 @@
     <title>TITLE</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   </head>
 
   <body>
@@ -41,9 +44,13 @@
     };
     firebase.initializeApp(config);
 
+    riot.compile(function() {
+      var tags = riot.mount('*')
+    })
 
     // INITIALIZE RIOT
-    riot.mount('cook');
+    // var tags = riot.mount('*')
+    // riot.mount('cook');
   </script>
 
 </html>

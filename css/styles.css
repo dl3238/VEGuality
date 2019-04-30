@@ -122,7 +122,11 @@ nav {
 }
 
 .header .home.bg {
-    background-image: url('https://unsplash.com/photos/IGfIGP5ONV0');
+    background-image: url('/assets/homepage.jpg');
+}
+
+.header .cook.bg {
+    background-image: url('/assets/cook.jpg');
 }
 
 .header .overlay {
@@ -140,26 +144,6 @@ nav {
     margin: 50px 0;
 }
 
-.header .homepage.bg {
-  background-image: url('/assets/homepageCover.jpeg')
-}
-
-.header .switch.bg {
-  background-image: url('/assets/switchCover.png')
-}
-
-.header .cook.bg {
-  background-image: url('/assets/cookCover.png')
-}
-
-.header .explore.bg {
-  background-image: url('/assets/exploreCover.png')
-}
-
-.header .inspire.bg {
-  background-image: url('/assets/inspireCover.png')
-}
-
 .container {
     width: 80%;
     margin: auto;
@@ -171,13 +155,19 @@ nav {
     width: 320px;
     padding: 10px;
     cursor: pointer;
+    margin: 0 10px;
 }
 
-
+.card1 .top {
+    -webkit-box-shadow: 2px 2px 3px 3px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow:    2px 2px 3px 3px #ccc;  /* Firefox 3.5 - 3.6 */
+    box-shadow:         2px 2px 3px 3px #ccc;
+}
 .card1 .bottom {
     width: 90%;
     background-color: white;
     position: relative;
+    height: 260px;    
 }
 
 .card1.overlapped .bottom {
@@ -186,6 +176,14 @@ nav {
 
 .card1 .bottom .description {
     padding: 30px;
+    height: 100%;
+    position: relative;
+}
+
+.card1 .bottom .description .button {
+    position: absolute;
+    bottom: 10px;
+    left: 86px;
 }
 
 .card1:hover >  .bottom .description i {
@@ -224,6 +222,7 @@ nav {
 .carousel .content {
     width: 320px;
     margin: 0 10px;
+    height: 330px;
 }
 
 .section {

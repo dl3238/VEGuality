@@ -28,9 +28,14 @@
 
     </nav>
     <div class="header">
-      <div class="switch bg row centered">
+      <div class="home bg row centered">
         <div class="overlay column centered">
-          <h1>Veganism</h1>
+          <h1>Video about Veganism (intro)</h1>
+          <div class="play button">
+            <i class="material-icons">
+              play_arrow
+            </i>
+          </div>
         </div>
       </div>
     </div>

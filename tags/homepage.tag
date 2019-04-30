@@ -27,7 +27,7 @@
 
     </nav>
     <div class="header">
-      <div class="homepage bg row vertically-centered space-around">
+      <div class="home bg row vertically-centered space-around">
         <div class="overlay column centered">
           <h5>FEEL WONDERFUL. LOOK GREAT.</h5>
           <h1>The road to a better start on your plate.</h1>
