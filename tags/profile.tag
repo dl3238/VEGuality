@@ -23,7 +23,7 @@
         <a class="row vertically-centered" href="cook.html">COOK</a>
         <a class="row vertically-centered" href="explore.html">EXPLORE</a>
         <a class="row vertically-centered" href="inspire.html">INSPIRE</a>
-        <a class="row vertically-centered" href="#">CONNECT</a>
+        <a class="row vertically-centered" href="connect.html">CONNECT</a>
       </div>
       <div style="margin-top:20px;" show={ !user } class="button call-to-action rounded green" onclick={ login }>Join the Community</div>
       <div style="margin-top:20px;" show={ user } class="button call-to-action rounded green" onclick={ logout }>Logout</div>
@@ -46,16 +46,18 @@
           <!--Tab Bar-->
           <div style="margin-right:;margin-top:20px; border:solid; border-color:#1abc9c; border-width:1px;border-radius:1rem;"class="">
             <ul class="nav nav-list">
-              <li><a href="#">My grocery list</a> </li>
-              <li><a href="#">My posts</a> </li>
-              <li><a href="#">My stories</a> </li>
+              <li><a href="#" onclick={ myList }>My grocery list</a> </li>
+              <li><a href="#" onclick={ myQuestions }>My questions</a> </li>
+              <li><a href="#" onclick={ myStories }>My stories</a> </li>
             </ul>
           </div>
         </div>
 
         <div style="margin-left:100px;"class="col-8">
 
-          <grocery-list></grocery-list>
+          <grocery-list if = { mode === "grocery" } show = { user }></grocery-list>
+          <my-questions if = {mode === "questions"} show = { user }></my-questions>
+
 
         </div>
 
@@ -69,12 +71,20 @@
   </body>
 
   <script>
-    //setup references to firebase
-    // let database = firebase.firestore();
-    //
-    // let usersRef = database.collection('users');
-    // let userKey = firebase.auth().currentUser.uid;
-    // let groceryRef = database.doc('users/' + userKey).collection('groceryList');
+
+    this.mode = "";
+
+    myList() {
+      this.mode = "grocery";
+    };
+
+    myQuestions() {
+      this.mode = "questions";
+    }
+
+    // myStories() {
+    //   this.mode = "stories";
+    // }
 
     //login
     login() {
@@ -84,11 +94,15 @@
     //logout
     logout() {
       firebase.auth().signOut();
+      localStorage.removeItem('userKey');
     };
     //change view of buttons
     firebase.auth().onAuthStateChanged(userObj => {
       if (userObj) {
         this.user = userObj;
+        console.log(this.user);
+        let userKey = firebase.auth().currentUser.uid;
+        localStorage.setItem('userKey', userKey);
       } else {
         this.user = null;
       }

@@ -28,14 +28,9 @@
 
     </nav>
     <div class="header">
-      <div class="home bg row centered">
+      <div class="switch bg row centered">
         <div class="overlay column centered">
-          <h1>Video about Veganism (intro)</h1>
-          <div class="play button">
-            <i class="material-icons">
-              play_arrow
-            </i>
-          </div>
+          <h1>Veganism</h1>
         </div>
       </div>
     </div>
@@ -130,11 +125,15 @@
     //logout
     logout() {
       firebase.auth().signOut();
+      localStorage.removeItem('userKey');
     };
     //change view of buttons
     firebase.auth().onAuthStateChanged(userObj => {
       if (userObj) {
         this.user = userObj;
+        console.log(this.user);
+        let userKey = firebase.auth().currentUser.uid;
+        localStorage.setItem('userKey', userKey);
       } else {
         this.user = null;
       }

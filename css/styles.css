@@ -122,7 +122,7 @@ nav {
 }
 
 .header .home.bg {
-    background-image: url('https://via.placeholder.com/1000x600');
+    background-image: url('https://unsplash.com/photos/IGfIGP5ONV0');
 }
 
 .header .cook.bg {
@@ -143,6 +143,26 @@ nav {
     margin: 50px 0;
 }
 
+.header .homepage.bg {
+  background-image: url('/assets/homepageCover.jpeg')
+}
+
+.header .switch.bg {
+  background-image: url('/assets/switchCover.png')
+}
+
+.header .cook.bg {
+  background-image: url('/assets/cookCover.png')
+}
+
+.header .explore.bg {
+  background-image: url('/assets/exploreCover.png')
+}
+
+.header .inspire.bg {
+  background-image: url('/assets/inspireCover.png')
+}
+
 .container {
     width: 80%;
     margin: auto;
@@ -150,35 +170,41 @@ nav {
     margin-top: 80px;
 }
 
-.card {
+.card1 {
     width: 320px;
     padding: 10px;
     cursor: pointer;
 }
 
 
-.card .bottom {
+
+.card1 .bottom {
   width: 90%;
   background-color: white;
   position: relative;
   height: 260px;
 }
 
-.card.overlapped .bottom {
+.card1.overlapped .bottom {
     margin: -100px auto 0;
 }
 
-.card .bottom .description {
+
+.card1 .bottom .description {
   padding: 30px;
   height: 100%;
   position: relative;
+
+.card1 .bottom .description {
+    padding: 30px;
+
 }
 
-.card:hover >  .bottom .description i {
+.card1:hover >  .bottom .description i {
     padding: 5px;
 }
 
-.card:hover >  .bottom .description .button {
+.card1:hover >  .bottom .description .button {
     opacity: 1;
 }
 
