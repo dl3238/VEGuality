@@ -33,8 +33,10 @@
     deleteQuestion(event) {
 
       let userKey = firebase.auth().currentUser.uid;
-      let id = item.id;
       debugger
+      let id = event.item.item.id;
+      debugger
+
       let userQuestions = database.doc('users/' + userKey).collection('questions');
       debugger
 
