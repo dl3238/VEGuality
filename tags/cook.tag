@@ -35,9 +35,18 @@
       </div>
     </div>
 
-    <div class="section column centered">
-      <h1>Magnificent Meals</h1>
-      <p>Wondering what to eat? Here are some easy, familiar meal ideas for breakfast, lunch, and dinner.</p>
+    <div class="header">
+      <div class="cook bg row centered">
+  //Brenda you need to upload the desired image into the CSS for this
+        <div class="overlay column centered">
+          <h1>Mouthwatering meals are just a click away</h1>
+          <div class="play button">
+            <i class="material-icons">
+              play_arrow
+            </i>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="section column centered">
@@ -82,8 +91,10 @@
           </i>
         </div>
         <div class="content">
+
           <img src="/assets/cl1.jpg" height="280px" width="250px">
           <h3><a href="https://lovingitvegan.com/vegan-tomato-basil-soup/" target="_blank">Tomato and Basil Soup</a></h3>
+
           <p>YUM! A protein-packed meal full of veggies that will full you up.</p>
         </div>
         <div class="content">
