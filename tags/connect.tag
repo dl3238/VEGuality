@@ -43,7 +43,7 @@
         <h1>This is my first question?</h1>
         <small>timestamp: </small>
         <p>comment1</p>
-        <textarea style="color:black;border:solid;border-width:1px;border-radius:1rem;"name="description" rows="2" cols="60" placeholder="type in your answer/comment here"></textarea>
+        <textarea style="color:black;border:solid;border-width:1px;border-radius:1rem;"name="description" rows="2" cols="60" placeholder="type in your answer/comment here" onchange= { commentInput }></textarea>
         <div style="margin-top:20px;" show={ !user } class="button call-to-action rounded green" onclick={ login }>Login to submit</div>
         <div style="margin-top:20px;" show={ user } class="button call-to-action rounded green" onclick={ answer }>Submit your answer</div>
       </div>
@@ -102,6 +102,7 @@
           question: this.question,
           uid: userKey,
           timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+          id:questionKey,
         };
         this.questionList.push(questionItem);
         this.update();
@@ -144,6 +145,14 @@
     this.on('unmount', () => {
       connect();
     })
+
+    //comments part
+    this.comment = "";
+    this.comments = [];
+    commentInput(e) {
+      this.comment = e.currentTarget.value;
+    };
+
 
 
   </script>

@@ -83,9 +83,9 @@
           </i>
         </div>
         <div class="content">
-          <img src="/assets/cl1.jpg" height="280px" width="250px">
-          <h3><a href="https://lovingitvegan.com/vegan-tomato-basil-soup/" target="_blank">Tomato & Basil Soup</a></h3>
-          <p>YUM! A protein-packed meal full of veggies that will make you satisfied! Click here to get the recipe and enjoy on a cold day.</p>
+          <img src="/assets/cl1.jpg" height="250px" width="280px">
+          <h3><a href="https://lovingitvegan.com/vegan-tomato-basil-soup/" target="_blank">Tomato and Basil Soup</a></h3>
+          <p>YUM! A protein-packed meal full of veggies that will full you up.</p>
         </div>
         <div class="content">
           <img src="/assets/cl2.jpg" height="250px" width="280px">
