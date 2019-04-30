@@ -19,7 +19,7 @@
         <a class="row vertically-centered" href="HTML/cook.html">COOK</a>
         <a class="row vertically-centered" href="HTML/explore.html">EXPLORE</a>
         <a class="row vertically-centered" href="HTML/inspire.html">INSPIRE</a>
-        <a class="row vertically-centered" href="#">CONNECT</a>
+        <a class="row vertically-centered" href="HTML/connect.html">CONNECT</a>
       </div>
       <div style="margin-top:20px;" show={ !user } class="button call-to-action rounded green" onclick={ login }>Join the Community</div>
       <div style="margin-top:20px;" show={ user } class="button call-to-action rounded green" onclick={ logout }>Logout</div>
@@ -145,11 +145,15 @@
   //logout
   logout() {
     firebase.auth().signOut();
+    localStorage.removeItem('userKey');
   };
   //change view of buttons
   firebase.auth().onAuthStateChanged(userObj => {
     if (userObj) {
       this.user = userObj;
+      console.log(this.user);
+      let userKey = firebase.auth().currentUser.uid;
+      localStorage.setItem('userKey', userKey);
     } else {
       this.user = null;
     }

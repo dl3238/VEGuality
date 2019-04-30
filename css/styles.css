@@ -167,32 +167,32 @@ nav {
     margin-top: 80px;
 }
 
-.card {
+.card1 {
     width: 320px;
     padding: 10px;
     cursor: pointer;
 }
 
 
-.card .bottom {
+.card1 .bottom {
     width: 90%;
     background-color: white;
     position: relative;
 }
 
-.card.overlapped .bottom {
+.card1.overlapped .bottom {
     margin: -100px auto 0;
 }
 
-.card .bottom .description {
+.card1 .bottom .description {
     padding: 30px;
 }
 
-.card:hover >  .bottom .description i {
+.card1:hover >  .bottom .description i {
     padding: 5px;
 }
 
-.card:hover >  .bottom .description .button {
+.card1:hover >  .bottom .description .button {
     opacity: 1;
 }
 

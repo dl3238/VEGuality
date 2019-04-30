@@ -19,7 +19,7 @@
         <a class="row vertically-centered" href="cook.html">COOK</a>
         <a class="row vertically-centered" href="explore.html">EXPLORE</a>
         <a class="row vertically-centered" href="inspire.html">INSPIRE</a>
-        <a class="row vertically-centered" href="#">CONNECT</a>
+        <a class="row vertically-centered" href="connect.html">CONNECT</a>
       </div>
       <div style="margin-top:20px;" show={ !user } class="button call-to-action rounded green" onclick={ login }>Join the Community</div>
       <div style="margin-top:20px;" show={ user } class="button call-to-action rounded green" onclick={ logout }>Logout</div>
@@ -76,9 +76,10 @@
         <div class="row full-width mt-30 between vertically-centered space-around">
             <div class="bg">
                 <h3>Share your story with the VEGuality community and help inspire others!</h3>
-                <div class="button call-to-action green">Share story!</div>
             </div>
         </div>
+
+        <!-- Modal -->
         <div class="row fulled p-10 mt-30 vertically-centered space-around">
             <!-- Card 1 -->
             <div class="profile overlapped">
@@ -200,11 +201,15 @@
       //logout
       logout() {
         firebase.auth().signOut();
+        localStorage.removeItem('userKey');
       };
       //change view of buttons
       firebase.auth().onAuthStateChanged(userObj => {
         if (userObj) {
           this.user = userObj;
+          console.log(this.user);
+          let userKey = firebase.auth().currentUser.uid;
+          localStorage.setItem('userKey', userKey);
         } else {
           this.user = null;
         }

@@ -26,14 +26,11 @@
 
 
   <script>
-
     //set up database
     let database = firebase.firestore();
 
     let usersRef = database.collection('users');
-
-    // let userKey = firebase.auth().currentUser.uid;
-    // let groceryRef = database.doc('users/' + userKey).collection('groceryList');
+    let userID = firebase.auth().currentUser;
 
     this.item = "";
     this.list = [];
@@ -58,7 +55,6 @@
         timestamp:firebase.firestore.FieldValue.serverTimestamp()
       };
       this.list.push(todo);
-      console.log(this.list);
       this.update();
 
       //database write
@@ -82,11 +78,9 @@
      //database write preparation
      let userKey = firebase.auth().currentUser.uid;
      let groceryRef = database.doc('users/' + userKey).collection('groceryList');
-     let itemID = groceryRef.doc().id;
-
 			for (doneTodo of doneItems) {
 				// DATABASE DELETE
-				groceryRef.doc(itemID).delete();
+				groceryRef.doc(doneTodo.id).delete();
 			};
 
       this.list = this.list.filter(todo => !todo.done);
@@ -102,7 +96,6 @@
       let userKey = firebase.auth().currentUser.uid;
       let groceryRef = database.doc('users/' + userKey).collection('groceryList');
       let itemID = groceryRef.doc().id;
-      console.log(itemID);
 			groceryRef.doc(itemID).update({
 				done: item.done
 			});
@@ -119,22 +112,46 @@
 
     // LIFECYCLE EVENTS ---------------------------------------
 
-		let stopListening;
+		// let stopListening;
+    //
+		// this.on('mount', () => {
+    //   //database write preparation
+    //   let userKey = firebase.auth().currentUser.uid;
+    //   let groceryRef = database.doc('users/' + userKey).collection('groceryList');
+		// 	// DATABASE READ LIVE
+		// 	stopListening = groceryRef.orderBy('timestamp', 'desc').onSnapshot(snapshot => {
+		// 		this.list = snapshot.docs.map(doc => doc.data());
+		// 		this.update();
+		// 	});
+		// });
+    //
+		// this.on('unmount', () => {
+		// 	stopListening();
+		// });
 
-		this.on('mount', () => {
-      //database write preparation
-      let userKey = firebase.auth().currentUser.uid;
-      let groceryRef = database.doc('users/' + userKey).collection('groceryList');
-			// DATABASE READ LIVE
-			stopListening = groceryRef.orderBy('timestamp', 'desc').onSnapshot(snapshot => {
-				this.list = snapshot.docs.map(doc => doc.data());
-				this.update();
-			});
-		});
+    let stopListening;
 
-		this.on('unmount', () => {
-			stopListening();
-		});
+    this.on('mount', () => {
+
+        let userKey = localStorage.getItem('userKey')
+        let groceryRef = database.doc('users/' + userKey).collection('groceryList');
+
+        stopListening = groceryRef. orderBy('timestamp', 'desc').onSnapshot(snapshot => {
+          let listItems = [];
+
+          snapshot.forEach(doc => {
+            listItems.push(doc.data());
+            // return doc.data();
+          })
+          this.list = listItems;
+          console.log(this.list)
+          this.update();
+        })
+    })
+
+    this.on('unmount', () => {
+      stopListening();
+    })
 
 
   </script>
