@@ -28,14 +28,9 @@
 
     </nav>
     <div class="header">
-      <div class="home bg row centered">
+      <div class="cook bg row centered">
         <div class="overlay column centered">
           <h1>Mouthwatering meals are just a click away</h1>
-          <div class="play button">
-            <i class="material-icons">
-              play_arrow
-            </i>
-          </div>
         </div>
       </div>
     </div>
@@ -56,8 +51,8 @@
         <div class="content">
           <img src="/assets/cb1.jpg" height="250px" width="280px">
           <h3>
-            <i>Bacon</i>
-            and Avocado Breakfast Sandwich</h3>
+            <a href="https://www.happy-mothering.com/08/recipes/vegan-bacon-breakfast-sandwich/" target="_blank"><i>Bacon</i>
+            and Avocado Breakfast Sandwich</a></h3>
           <p>What's better than a whole grain breakfast sandwich packed with savory flavors?!</p>
         </div>
         <div class="content">
@@ -88,7 +83,7 @@
         </div>
         <div class="content">
           <img src="/assets/cl1.jpg" height="280px" width="250px">
-          <h3>Tomato and Basil Soup</h3>
+          <h3><a href="https://lovingitvegan.com/vegan-tomato-basil-soup/" target="_blank">Tomato and Basil Soup</a></h3>
           <p>YUM! A protein-packed meal full of veggies that will full you up.</p>
         </div>
         <div class="content">
@@ -119,7 +114,7 @@
         </div>
         <div class="content">
           <img src="/assets/cd1.jpg" height="250px" width="280px">
-          <h3>Stuffed Baked Potato and Salad</h3>
+          <h3><a href="https://www.yummly.com/recipe/Vegan-Stuffed-Sweet-Potato-1579325" target="_blank">Stuffed Baked Potato and Salad</a></h3>
           <p>This potato and salad will make you satisfied without feeling stuffed.</p>
         </div>
         <div class="content">

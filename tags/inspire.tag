@@ -27,14 +27,9 @@
     </nav>
 
     <div class="header">
-      <div class="home bg row centered">
+      <div class="inspire bg row centered">
         <div class="overlay column centered">
-          <h1>Video about inspiring others to care</h1>
-          <div class="play button">
-            <i class="material-icons">
-              play_arrow
-            </i>
-          </div>
+          <h1>Inspire starts with YOU.</h1>
         </div>
       </div>
     </div>
@@ -50,12 +45,12 @@
             <!-- Card 1 -->
             <div class="profile overlapped">
                 <div class="avatar">
-                    <img src="https://via.placeholder.com/100x140">
+                    <img src="/assets/oliverButler.png" height="100px" width="100px">
                 </div>
                 <div class="bg-pane">
                     <div class="description">
-                        <h3>Robert A</h3>
-                        <p>I was raised and worked on livestock farms in lows, joined the Marine Corps at 19, and worked in some...</p>
+                        <h3>Oliver Butler</h3>
+                        <p>I was 18 when I decided to go vegan. I had begun thinking about it around the age of 16, but it took me a couple of years to make the leap. Of course now I don’t know what took me so long! But I was young and carefree...</p>
                         <div class="button call-to-action">
                             Read More
                         </div>
@@ -65,12 +60,12 @@
             <!-- Card 2 -->
             <div class="profile overlapped">
                 <div class="avatar">
-                    <img src="https://via.placeholder.com/100x140">
+                    <img src="/assets/sammyDay.png" height="100px" width="100px">
                 </div>
                 <div class="bg-pane">
                     <div class="description">
-                        <h3>Robert A</h3>
-                        <p>I was raised and worked on livestock farms in lows, joined the Marine Corps at 19, and worked in some...</p>
+                        <h3>Sammy Day</h3>
+                        <p>I’d always been a little disturbed by the idea of eating animals and was vegetarian on and off for years, but the final inspiration to embrace veganism came when I began to research factory farming...</p>
                         <div class="button call-to-action">
                             Read More
                         </div>
@@ -81,9 +76,6 @@
         <div class="row full-width mt-30 between vertically-centered space-around">
             <div class="bg">
                 <h3>Share your story with the VEGuality community and help inspire others!</h3>
-                <div show={ !user } style="width:250px;"class="button call-to-action rounded green" >Login to share</div>
-                <div show={ user } style="width:250px;"class="button call-to-action rounded green" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" >Share your stories</div>
-
             </div>
         </div>
 
@@ -92,12 +84,12 @@
             <!-- Card 1 -->
             <div class="profile overlapped">
                 <div class="avatar">
-                    <img src="https://via.placeholder.com/100x140">
+                    <img src="/assets/lilaCox.png" height="100px" width="100px">
                 </div>
                 <div class="bg-pane">
                     <div class="description">
-                        <h3>Robert A</h3>
-                        <p>I was raised and worked on livestock farms in lows, joined the Marine Corps at 19, and worked in some...</p>
+                        <h3>Lila Cox</h3>
+                        <p>I was one of those people that would say, “I could never give up meat.”  Then, suddenly, I did.  I read The Omnivore’s Dilemma, and when I realized what went into creating my food, I couldn’t look at meat the same way...</p>
                         <div class="button call-to-action">
                             Read More
                         </div>
@@ -107,12 +99,12 @@
             <!-- Card 2 -->
             <div class="profile overlapped">
                 <div class="avatar">
-                    <img src="https://via.placeholder.com/100x140">
+                    <img src="/assets/joeMeme.png" height="100px" width="100px">
                 </div>
                 <div class="bg-pane">
                     <div class="description">
-                        <h3>Robert A</h3>
-                        <p>I was raised and worked on livestock farms in lows, joined the Marine Corps at 19, and worked in some...</p>
+                        <h3>Joe Meme</h3>
+                        <p>When I decided to go vegetarian, I was eight years old and I saw a pamphlet in my dad’s chiropractor’s office with a baby pig and kitten on it and it said, “Which do you pet? Which do you eat? Why?” I learned from that pamphlet...</p>
                         <div class="button call-to-action">
                             Read More
                         </div>
@@ -129,7 +121,7 @@
         <div class="row space-around">
             <div class="card">
                 <div class="top">
-                    <img src="https://via.placeholder.com/320x250">
+                    <img src="/assets/inspire1.jpg" height="200px" width="250px">
                 </div>
                 <div class="bottom">
                     <div class="description">
@@ -142,7 +134,7 @@
             </div>
             <div class="card">
                 <div class="top">
-                    <img src="https://via.placeholder.com/320x250">
+                    <img src="/assets/inspire2.jpg" height="200px" width="250px">
                 </div>
                 <div class="bottom">
                     <div class="description">
@@ -156,7 +148,7 @@
             </div>
             <div class="card">
                 <div class="top">
-                    <img src="https://via.placeholder.com/320x250">
+                    <img src="/assets/inspire3.jpg" height="200px" width="250px">
                 </div>
                 <div class="bottom">
                     <div class="description">
@@ -180,15 +172,13 @@
                 </i>
             </div>
             <div class="content">
-                <img src="https://via.placeholder.com/320x250" />
-                <h3></h3>
-                <h4></h4>
+                <img src="/assets/book1.jpg" height="300px" width="300px">
+                <h3><i>by Keegan Kuhn</i></h3>
                 <a href="#" class="button green">Buy on Amazon</a>
             </div>
             <div class="content">
-                <img src="https://via.placeholder.com/320x250" />
-                <h3></h3>
-                <h4></h4>
+                <img src="/assets/book2.jpg" height="300px" width="300px">
+                <h3><i>by Eunice Wong</i></h3>
                 <a href="#" class="button green">Buy on Amazon</a>
             </div>
             <div class="right arrow row centered" onclick="changeSlide2(1)">

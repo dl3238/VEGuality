@@ -122,7 +122,7 @@ nav {
 }
 
 .header .home.bg {
-    background-image: url('https://via.placeholder.com/1000x600');
+    background-image: url('https://unsplash.com/photos/IGfIGP5ONV0');
 }
 
 .header .overlay {
@@ -138,6 +138,26 @@ nav {
 
 .header .overlay h1 {
     margin: 50px 0;
+}
+
+.header .homepage.bg {
+  background-image: url('/assets/homepageCover.jpeg')
+}
+
+.header .switch.bg {
+  background-image: url('/assets/switchCover.png')
+}
+
+.header .cook.bg {
+  background-image: url('/assets/cookCover.png')
+}
+
+.header .explore.bg {
+  background-image: url('/assets/exploreCover.png')
+}
+
+.header .inspire.bg {
+  background-image: url('/assets/inspireCover.png')
 }
 
 .container {
