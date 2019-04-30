@@ -102,6 +102,7 @@
           question: this.question,
           uid: userKey,
           timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+          id:questionKey,
         };
         this.questionList.push(questionItem);
         this.update();
