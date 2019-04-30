@@ -125,9 +125,6 @@ nav {
     background-image: url('https://unsplash.com/photos/IGfIGP5ONV0');
 }
 
-.header .cook.bg {
-    background-image: url('/assets/cook.jpg');
-}
 .header .overlay {
     color: #ecf0f1;
     background-color: rgba(0,0,0,0.6);
@@ -177,27 +174,18 @@ nav {
 }
 
 
-
 .card1 .bottom {
-  width: 90%;
-  background-color: white;
-  position: relative;
-  height: 260px;
+    width: 90%;
+    background-color: white;
+    position: relative;
 }
 
 .card1.overlapped .bottom {
     margin: -100px auto 0;
 }
 
-
-.card1 .bottom .description {
-  padding: 30px;
-  height: 100%;
-  position: relative;
-
 .card1 .bottom .description {
     padding: 30px;
-
 }
 
 .card1:hover >  .bottom .description i {
@@ -236,7 +224,6 @@ nav {
 .carousel .content {
     width: 320px;
     margin: 0 10px;
-    height: 330px;
 }
 
 .section {
