@@ -27,14 +27,9 @@
     </nav>
 
     <div class="header">
-      <div class="home bg row centered">
+      <div class="inspire bg row centered">
         <div class="overlay column centered">
-          <h1>Video about inspiring others to care</h1>
-          <div class="play button">
-            <i class="material-icons">
-              play_arrow
-            </i>
-          </div>
+          <h1>Inspire starts with YOU.</h1>
         </div>
       </div>
     </div>

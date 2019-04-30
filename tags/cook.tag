@@ -28,14 +28,9 @@
 
     </nav>
     <div class="header">
-      <div class="home bg row centered">
+      <div class="cook bg row centered">
         <div class="overlay column centered">
           <h1>Mouthwatering meals are just a click away</h1>
-          <div class="play button">
-            <i class="material-icons">
-              play_arrow
-            </i>
-          </div>
         </div>
       </div>
     </div>
