@@ -57,12 +57,13 @@
         </div>
         <div class="content">
           <img src="/assets/cb2.jpg" height="250px" width="280px">
-          <h3>Tofu <i>egg</i> and Hash browns</h3>
+          <h3> <a href="https://www.onegreenplanet.org/vegan-recipe/breakfast-bowl-with-tofu-scramble-and-baked-hash-browns/" target="_blank">
+            Tofu <i>egg</i> and Hash browns</a> </h3>
           <p>Learn how to cook this simple dish! Add hot sauce to spice it up!</p>
         </div>
         <div class="content">
           <img src="/assets/cb3.jpg" height="250px" width="280px">
-          <h3>Whole-grain waffles and <i>sausage</i></h3>
+          <h3><a href="https://minimalistbaker.com/vegan-whole-grain-waffles-with-roasted-stone-fruit/" target="_blank">Whole-grain waffles and <i>sausage</i></a></h3>
           <p>Cook with a lot of love in a couple of minutes!</p>
         </div>
         <div class="right arrow row centered" onclick="changeSlide1(1)">
@@ -83,18 +84,18 @@
         </div>
         <div class="content">
           <img src="/assets/cl1.jpg" height="280px" width="250px">
-          <h3><a href="https://lovingitvegan.com/vegan-tomato-basil-soup/" target="_blank">Tomato and Basil Soup</a></h3>
-          <p>YUM! A protein-packed meal full of veggies that will full you up.</p>
+          <h3><a href="https://lovingitvegan.com/vegan-tomato-basil-soup/" target="_blank">Tomato & Basil Soup</a></h3>
+          <p>YUM! A protein-packed meal full of veggies that will make you satisfied! Click here to get the recipe and enjoy on a cold day.</p>
         </div>
         <div class="content">
           <img src="/assets/cl2.jpg" height="250px" width="280px">
-          <h3><i>Cheesy</i> Pinto Bean tacos</h3>
+          <h3><a href="https://www.thissavoryvegan.com/marinated-pinto-bean-tacos/" target="_blank"><i>Cheesy</i> Pinto Bean tacos</a></h3>
           <p>Enjoy this filling meal - protein-rich beans, dairy-free sour cream, whole-grain brown rice, and cheesy Daiya cheddar-style shreds!</p>
         </div>
         <div class="content">
           <img src="/assets/cl3.jpg" height="250px" width="280px">
-          <h3><i>Turk'y</i> Sandwich with Sprouts and Avocado</h3>
-          <p>Delicious sandwhich in a matter of minutes!</p>
+          <h3><a href="https://www.marthastewart.com/314685/avocado-and-sprout-club-sandwich" target="_blank"><i>Turk'y</i> Sandwich with Sprouts and Avocado</a></h3>
+          <p>Delicious sandwhich in a matter of minutes! Feel free to change the protein if you wish!</p>
         </div>
         <div class="right arrow row centered" onclick="changeSlide1(1)">
           <i class="material-icons">
@@ -119,12 +120,12 @@
         </div>
         <div class="content">
           <img src="/assets/cd2.jpg" height="250px" width="280px">
-          <h3>Spaghetti with <i>meat</i>balls</h3>
+          <h3><a href="https://minimalistbaker.com/simple-vegan-meatballs/" target="_blank">Spaghetti with <i>meat</i>balls</a></h3>
           <p>This is a classic! Grab your spaghetti-twirling fork and go for it!</p>
         </div>
         <div class="content">
           <img src="/assets/cd3.jpg" height="250px" width="280px">
-          <h3>Avocado burger with Sweet Potato Fries</h3>
+          <h3><a href="http://kblog.lunchboxbunch.com/2012/02/easy-sweet-potato-veggie-burgers-with.html" target="_blank">Avocado burger with Sweet Potato Fries</a></h3>
           <p>No need for an introduction! Stacked high with fresh and nourishing ingredients.</p>
         </div>
         <div class="right arrow row centered" onclick="changeSlide1(1)">

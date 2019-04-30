@@ -38,7 +38,7 @@
         <div class="row centered p-10 text-centered" style="display: block;">
             <h1>My Story</h1>
             <p>
-                Hear why members of the ChooseVeg community went vegan or vegantarian, cut back on meat, or began eating more plant-based meats.
+                Hear why members of the VEGuality community went vegan or vegantarian, cut back on meat, or began eating more plant-based meats.
             </p>
         </div>
         <div class="row fulled p-10 mt-30 vertically-centered space-around">
@@ -162,8 +162,8 @@
         </div>
     </div>
     <div class="section pink-bg column reversed centered full-width">
-        <h1>Motivating Media</h1>
-        <h3>Share these life-changing documentaries and books with others or check them out yourself for added
+        <h1>Motivating Texts</h1>
+        <h3>Share these life-changing books with others or check them out yourself for added
             inspiration.</h3>
         <div class="carousel row centered" id="carousel-inspire-1">
             <div class="left arrow row centered" onclick="changeSlide2(-1)">
