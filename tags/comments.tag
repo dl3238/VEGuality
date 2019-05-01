@@ -1,17 +1,11 @@
 <comments>
-  <p></p>
+  <ul>
+    <li>{answer.comment}</li>
+  </ul>
+  
 
   <script>
-    // JAVASCRIPT
-    let tag = this;
 
-    this.myMsg = "Hello!";
-    this.foo = "special";
-
-    this.bar = function(event) {
-      alert('CLICKED!');
-      tag.myMsg = "Goodbye!";
-    }
   </script>
 
   <style>

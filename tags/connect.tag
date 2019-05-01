@@ -31,23 +31,17 @@
       <div class="connect-bg row vertically-centered space-around">
         <div style="padding-bottom:60px;"class="overlay column centered">
           <h1>Ask your questions</h1>
-          <textarea refs="textarea" style="color:black;border:solid;border-width:1px;border-radius:1rem;margin-top:-30px;"name="description" rows="4" cols="60" placeholder="type in your question here" onchange={ questionInput }></textarea>
+          <textarea ref="textarea" style="color:black;border:solid;border-width:1px;border-radius:1rem;margin-top:-30px;"name="description" rows="4" cols="60" placeholder="type in your question here" onchange={ questionInput }></textarea>
           <div style="margin-top:20px;" show={ !user } class="button call-to-action rounded green" onclick={ login }>Login to submit</div>
           <div style="margin-top:20px;" show={ user } class="button call-to-action rounded green" onclick={ questionSubmit }>Submit</div>
         </div>
       </div>
     </div>
-
-    <div style="margin-top:-200px;"class="text-center questionContainer vertically-centered">
+<!--  -->
+    <div style="margin-top:-220px;margin-bottom:30px;"class="text-center questionContainer vertically-centered">
       <div class="overlay column centered question">
-        <h1>This is my first question?</h1>
-        <small>timestamp: </small>
-        <p>comment1</p>
-        <textarea style="color:black;border:solid;border-width:1px;border-radius:1rem;"name="description" rows="2" cols="60" placeholder="type in your answer/comment here" onchange= { commentInput }></textarea>
-        <div style="margin-top:20px;" show={ !user } class="button call-to-action rounded green" onclick={ login }>Login to submit</div>
-        <div style="margin-top:20px;" show={ user } class="button call-to-action rounded green" onclick={ answer }>Submit your answer</div>
+        <h1 style="border:solid;border-width:1.5px;border-color:gray;border-radius:1rem;padding:15px;">Question Board</h1>
       </div>
-      <hr>
     </div>
 
     <question each={ item, i in questionList }></question>
@@ -120,7 +114,7 @@
           timestamp: firebase.firestore.FieldValue.serverTimestamp(),
           id: questionKey,
         });
-        this.question = this.refs.textarea.value = "";
+        this.question = this.refs.textarea.value = '';
       }
       event.preventDefault();
     };
@@ -145,13 +139,6 @@
     this.on('unmount', () => {
       connect();
     })
-
-    //comments part
-    this.comment = "";
-    this.comments = [];
-    commentInput(e) {
-      this.comment = e.currentTarget.value;
-    };
 
 
 
