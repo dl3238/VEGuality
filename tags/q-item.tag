@@ -9,23 +9,22 @@
     let database = firebase.firestore();
     let usersRef = database.collection('users');
     let questionsRef = database.collection('questions');
-    
+
     this.comments = [];
     showComments(e) {
       let userKey = firebase.auth().currentUser.uid;
       let questionID = e.item.item.id;
       let commentsRef = database.doc('users/' + userKey).collection('questions').doc(questionID).collection('comments');
-      debugger
       commentsRef.orderBy('timestamp', 'desc').onSnapshot(snapshot => {
         let commentItems = [];
-        debugger
+
         snapshot.forEach(doc => {
           commentItems.push(doc.data());
           //return doc.data()
         })
-        debugger
+
         this.comments = commentItems;
-        debugger
+        
         this.update();
       })
     };
