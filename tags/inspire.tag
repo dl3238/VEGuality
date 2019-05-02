@@ -76,6 +76,8 @@
         <div class="row full-width mt-30 between vertically-centered space-around">
             <div class="bg">
                 <h3>Share your story with the VEGuality community and help inspire others!</h3>
+                <div style="width:150px;margin-top:20px;" show={ !user } class="button call-to-action rounded green" onclick={ login }>Login to share</div>
+                <div style="width:150px;margin-top:20px;" show={ user } class="button call-to-action rounded green" onclick={ }>Share your story</div>
             </div>
         </div>
 
@@ -114,7 +116,7 @@
         </div>
     </div>
 
-    <div class="section column centered">
+    <div style="margin-top:-100px;"class="section column centered">
         <h1>How to Talk With Others</h1>
         <p>Excited about sharing your new way of eating with friends and family? Here’s what to do to help others get
             it.</p>
