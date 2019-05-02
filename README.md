@@ -2,7 +2,7 @@
 
 ### By: Melissa Yeo, Brenda Khor, Dongxin Li
 
-#### Design Summary
+#### Design Executive Summary
 * Strategy
     * <b>Problem</b>: We talked to vegans, and wanted to see what common problems they faced, and what could be done if they had a website. While a lot of them talked about lack of food options, another theme was that they felt alone, and that they had no support.
     * <b>User needs</b>: vegan related resources in 1 location. Many current websites currently tend to be more siloed e.g., information about restaurants and shops, articles related to vegan issues, events sites. Consequently, it is hard for a vegan person to access the information they want in a single site which is frustrating.
@@ -39,5 +39,6 @@
         * ![](https://i.imgur.com/fuT1x4y.png)
 * Surface
     * See Demo URL
-* Github Repository:
+* Github Repository: 
+* Demonstration page: https://dl3238.github.io/Final-Project-MSTU5013-/
 * YouTube Reflection Video:
