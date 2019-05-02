@@ -77,9 +77,27 @@
             <div class="bg">
                 <h3>Share your story with the VEGuality community and help inspire others!</h3>
                 <div style="width:150px;margin-top:20px;" show={ !user } class="button call-to-action rounded green" onclick={ login }>Login to share</div>
-                <div style="width:150px;margin-top:20px;" show={ user } class="button call-to-action rounded green" onclick={ }>Share your story</div>
+                <div style="width:150px;margin-top:20px;" show={ user } class="button call-to-action rounded green" onclick={ storyShare }>Share your story</div>
             </div>
         </div>
+
+        <div if = { mode === "share" } class="">
+          <form>
+            <div class="form-group">
+              <label for="">Title</label>
+              <input ref="title" type="email" class="form-control" placeholder="Title of your story" required onchange={titleInput}>
+            </div>
+            <div class="form-group">
+              <label for="">Content</label>
+              <textarea ref="content"name="storyContent" class="form-control"rows="8" cols="80" required onchange={contentInput}></textarea>
+            </div>
+            <div class="form-group">
+              <label for="">Email</label>
+              <input ref="email"type="email" class="form-control" placeholder="email@example.com" required onchange={emailInput}>
+            </div>
+          </form>
+        </div>
+        <button style="margin-bottom:20px;"if = { mode === "share" } class="btn btn-primary" type="submit" onclick={ submitStory }>Submit form</button>
 
         <!-- Modal -->
         <div class="row fulled p-10 mt-30 vertically-centered space-around">
@@ -116,7 +134,7 @@
         </div>
     </div>
 
-    <div style="margin-top:-100px;"class="section column centered">
+    <div style="margin-top:-50px;"class="section column centered">
         <h1>How to Talk With Others</h1>
         <p>Excited about sharing your new way of eating with friends and family? Here’s what to do to help others get
             it.</p>
@@ -217,6 +235,72 @@
         }
         this.update();
       });
+
+      //database references
+      let database = firebase.firestore();
+      let usersRef = database.collection('users');
+
+      this.title = "";
+      this.content = "";
+      this.email = "";
+      this.stories = [];
+
+      this.mode = "";
+      storyShare() {
+        this.mode = "share";
+      }
+
+      titleInput(e) {
+        this.title = e.currentTarget.value;
+        console.log(this.title);
+      }
+      contentInput(e) {
+        this.content = e.currentTarget.value;
+        console.log(this.content);
+      }
+      emailInput(e) {
+        this.email = e.currentTarget.value;
+        console.log(this.email);
+      }
+
+      submitStory() {
+        let userKey = firebase.auth().currentUser.uid;
+        let storiesRef = usersRef.doc(userKey).collection('stories');
+        let storyKey = storiesRef.doc().id;
+
+        if(this.title && this.content && this.email) {
+          let storyItem = {
+            title: this.title,
+            content: this.content,
+            email: this.email,
+            timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+            id: storyKey,
+          };
+          this.stories.push(storyItem);
+          this.update();
+          alert("Thanks for sharing! You will be notified once your story has been approved to publish. Please go to your personal file to check status.");
+
+          storiesRef.doc(storyKey).set({
+            title: this.title,
+            content: this.content,
+            email: this.email,
+            timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+            id: storyKey,
+          });
+
+          this.title = this.refs.title.value = '';
+          this.content = this.refs.content.value = '';
+          this.email = this.refs.email.value = '';
+        }
+
+        event.preventDefault();
+      }
+
+
+
+
+
+
     //carousel
       var currentSlide1 = 0;
       var slides1 = [

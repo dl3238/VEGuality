@@ -57,6 +57,7 @@
 
           <grocery-list if = { mode === "grocery" } show = { user }></grocery-list>
           <my-questions if = {mode === "questions"} show = { user }></my-questions>
+          <my-stories if = {mode === "stories"} show = { user }></my-stories>
 
 
         </div>
@@ -82,9 +83,9 @@
       this.mode = "questions";
     }
 
-    // myStories() {
-    //   this.mode = "stories";
-    // }
+    myStories() {
+      this.mode = "stories";
+    }
 
     //login
     login() {

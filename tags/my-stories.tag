@@ -1,12 +1,10 @@
-<my-questions>
+<my-stories>
   <div class="">
-    <h1>My Questions</h1>
+   <h1>My Stories</h1>
   </div>
-
-  <q-item each={item, i in questions}></q-item>
+  <story-item each={ story, i in stories }></story-item>
 
   <script>
-
     firebase.auth().onAuthStateChanged(userObj => {
       if (userObj) {
         this.user = userObj;
@@ -18,43 +16,34 @@
       this.update();
     });
 
-    // refs to db
+    this.stories = [];
+
     let database = firebase.firestore();
     let usersRef = database.collection('users');
-    let questionsRef = database.collection('questions');
 
-    this.questions = [];
-
-    //realtime db
-    let myQuestions;
+    let myStories;
 
     this.on('mount', () => {
       let userKey = firebase.auth().currentUser.uid;
-      let userQuestions = database.doc('users/' + userKey).collection('questions');
+      let storiesRef = usersRef.doc(userKey).collection('stories');
 
-        myQuestions = userQuestions.orderBy('timestamp', 'desc').onSnapshot(snapshot => {
+        myStories = storiesRef.orderBy('timestamp', 'desc').onSnapshot(snapshot => {
           let listItems = [];
 
           snapshot.forEach(doc => {
             listItems.push(doc.data());
             // return doc.data();
           })
-          this.questions = listItems;
+          this.stories = listItems;
           this.update();
         })
     });
 
     this.on('unmount', () => {
-      myQuestions();
+      myStories();
     });
+
   </script>
 
-  <style>
-    /* CSS */
-    :scope {}
-    .special {
-      background-color: #333333;
-      color: #FFFFFF;
-    }
-  </style>
-</my-questions>
+
+</my-stories>
