@@ -30,7 +30,7 @@
     <div class="header">
       <div class="switch bg row centered">
         <div class="overlay column centered">
-          <h1>Veganism</h1>
+          <h1>Intro to Veganism</h1>
         </div>
       </div>
     </div>
