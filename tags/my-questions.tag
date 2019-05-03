@@ -2,10 +2,11 @@
   <div class="">
     <h1>My Questions</h1>
   </div>
-
-  <q-item each={item, i in questions}></q-item>
+  <q-item each={item, i in questions} class=""></q-item>
 
   <script>
+
+
 
     firebase.auth().onAuthStateChanged(userObj => {
       if (userObj) {
@@ -25,6 +26,19 @@
 
     this.questions = [];
 
+    //delete question
+    deleteQuestion(event) {
+
+      let userKey = firebase.auth().currentUser.uid;
+      let id = event.item.item.id;
+
+      let userQuestions = database.doc('users/' + userKey).collection('questions');
+
+      userQuestions.doc(id).delete();
+      questionsRef.doc(id).delete();
+      this.update();
+    }
+
     //realtime db
     let myQuestions;
 
@@ -42,11 +56,11 @@
           this.questions = listItems;
           this.update();
         })
-    });
+    })
 
     this.on('unmount', () => {
       myQuestions();
-    });
+    })
   </script>
 
   <style>
