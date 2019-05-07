@@ -15,7 +15,7 @@
         <img style="margin-top:20px;width:30%;" src="assets/logo.png"/>
       </div>
       <div style="padding-top:20px;" class="links row vertically-centered">
-        <a class="row vertically-centered" href="HTML/switch.html">SWITCH</a>
+        <a class="row vertically-centered" href="./HTML/switch.html">SWITCH</a>
         <a class="row vertically-centered" href="HTML/cook.html">COOK</a>
         <a class="row vertically-centered" href="HTML/explore.html">EXPLORE</a>
         <a class="row vertically-centered" href="HTML/inspire.html">INSPIRE</a>
