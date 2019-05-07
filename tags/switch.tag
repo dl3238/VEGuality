@@ -12,15 +12,15 @@
   <body class="no-margin">
     <nav class="row centered">
       <div class="logo">
-        <a href="/"><img style="margin-top:20px;width:30%;" src="../assets/logo.png"/></a>
+        <a href="./index.html"><img style="margin-top:20px;width:30%;" src="../assets/logo.png"/></a>
 
       </div>
       <div style="padding-top:20px;"class="links row vertically-centered">
-        <a class="row vertically-centered" href="#">SWITCH</a>
+        <a class="row vertically-centered" href="switch.html">SWITCH</a>
         <a class="row vertically-centered" href="cook.html">COOK</a>
         <a class="row vertically-centered" href="explore.html">EXPLORE</a>
         <a class="row vertically-centered" href="inspire.html">INSPIRE</a>
-        <a class="row vertically-centered" href="#">CONNECT</a>
+        <a class="row vertically-centered" href="connect.html">CONNECT</a>
       </div>
       <div style="margin-top:20px;" show={ !user } class="button call-to-action rounded green" onclick={ login }>Join the Community</div>
       <div style="margin-top:20px;" show={ user } class="button call-to-action rounded green" onclick={ logout }>Logout</div>
