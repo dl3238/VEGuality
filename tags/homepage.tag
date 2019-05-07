@@ -110,12 +110,14 @@
             <div class="description">
               <h2>Inspire</h2>
               <p>You are NOT alone. Read their stories and be amazed of what they have learned about themselves and their identities. Have confidence to post your own story!</p>
-              <a href="HTML/inspire.html"><div class="button call-to-action pink">
+              <a href="HTML/inspire.html">
+                <div class="button call-to-action pink">
                 Show Me
                 <i class="material-icons">
                   keyboard_arrow_right
                 </i>
-              </div></a>
+               </div>
+              </a>
               <div class="button call-to-action pink">
                 Show Me
                 <i class="material-icons">
