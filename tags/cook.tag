@@ -141,7 +141,9 @@
         <h1>It Just Got Easier</h1>
         <h4>Planning your supermarket-ing has never been easier. Write down what you need to buy so it's ready for your next trip to the grocery store!
         </h4>
-        <div class="button green" onclick={ groList }>Create your grocery list</div>
+        <div class="button green" onclick={ login } show={ !user }>Log in to create your grocery list</div>
+        <a href="profile.html"><div class="button green" show={user}>Create your grocery list</div></a>
+
       </div>
       <div class="right row centered">
         <img src="/assets/grocerylist.jpg" height="300px" width="500px">
