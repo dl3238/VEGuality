@@ -4,7 +4,7 @@
 
     <title>TITLE</title>
 
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   </head>
@@ -12,7 +12,7 @@
   <body class="no-margin">
     <nav class="row centered">
       <div class="logo">
-        <a href="/"><img style="margin-top:20px;width:30%;" src="/assets/logo.png"/></a>
+        <a href="/"><img style="margin-top:20px;width:30%;" src="../assets/logo.png"/></a>
 
       </div>
       <div style="padding-top:20px;"class="links row vertically-centered">
@@ -47,12 +47,12 @@
           </i>
         </div>
         <div class="content">
-          <img src="/assets/m1.jpg" height="300px" width="280px">
+          <img src="../assets/m1.jpg" height="300px" width="280px">
           <h3></h3>
           <p></p>
         </div>
         <div class="content">
-          <img src="/assets/m2.jpeg" height="300px" width="280px">
+          <img src="../assets/m2.jpeg" height="300px" width="280px">
           <h3></h3>
           <p></p>
         </div>
@@ -75,14 +75,14 @@
           burritos, granola bars, canned soups, and nuts.</p>
       </div>
       <div class="right image-stacked">
-        <img src="/assets/s1.jpg" height="200px" width="300px">
-        <img src="/assets/s1p2.jpg" height="300px" width="300px">
+        <img src="../assets/s1.jpg" height="200px" width="300px">
+        <img src="../assets/s1p2.jpg" height="300px" width="300px">
       </div>
     </div>
     <div class="section row no-padding centered">
       <div class="left image-stacked">
-        <img src="/assets/s2.jpg" height="200px" width="300px">
-        <img src="/assets/s2p2.jpg" height="200px" width="300px">
+        <img src="../assets/s2.jpg" height="200px" width="300px">
+        <img src="../assets/s2p2.jpg" height="200px" width="300px">
       </div>
       <div class="right">
         <h1>Listen to Them</h1>
@@ -95,14 +95,14 @@
         <p>If you want your family and friends to see things the way you do, stay healthy and stay kind. Even if they don’t get it at first, in time they’ll realize how great what you’re doing is for you (not to mention the world).</p>
       </div>
       <div class="right image-stacked">
-        <img src="/assets/s3.jpg" height="200px" width="300px">
-        <img src="/assets/s3p2.jpg" height="300px" width="200px">
+        <img src="../assets/s3.jpg" height="200px" width="300px">
+        <img src="../assets/s3p2.jpg" height="300px" width="200px">
       </div>
     </div>
     <div class="section row no-padding centered">
       <div class="left image-stacked">
-        <img src="/assets/s4.jpg" height="200px" width="300px">
-        <img src="/assets/s4p2.jpg" height="300px" width="280px">
+        <img src="../assets/s4.jpg" height="200px" width="300px">
+        <img src="../assets/s4p2.jpg" height="300px" width="280px">
       </div>
       <div class="right">
         <h1>Practice Patience</h1>

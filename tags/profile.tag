@@ -19,7 +19,7 @@
   <body class="no-margin">
     <nav class="row centered">
       <div class="logo">
-        <a href="/"><img style="margin-top:20px;width:30%;" src="/assets/logo.png"/></a>
+        <a href="/"><img style="margin-top:20px;width:30%;" src="../assets/logo.png"/></a>
 
       </div>
       <div style="padding-top:20px;" class="links row vertically-centered">
@@ -38,7 +38,7 @@
       <div class="row">
         <div class="d-flex flex-column col-4">
           <div class="card" style="width: 20rem;">
-            <img src="/assets/avatar.png" style="width:85%;" class="card-img-top" alt="avatar">
+            <img src="../assets/avatar.png" style="width:85%;" class="card-img-top" alt="avatar">
             <div class="card-body">
               <h5 class="card-title">Kalen Venus</h5>
               <p class="card-text">From Atlanta, GA. 23 years old. Vegan since '18. Motto: Love <i class="fa fa-envira"></i> and have compassion for <i class="fa fa-paw"></i>.</p>

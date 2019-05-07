@@ -12,7 +12,7 @@
   <body class="no-margin">
     <nav class="row centered">
       <div class="logo">
-        <a href="/"><img style="margin-top:20px;width:30%;" src="/assets/logo.png"/></a>
+        <a href="/"><img style="margin-top:20px;width:30%;" src="../assets/logo.png"/></a>
       </div>
       <div style="padding-top:20px;" class="links row vertically-centered">
         <a class="row vertically-centered" href="switch.html">SWITCH</a>
@@ -45,7 +45,7 @@
             <!-- Card 1 -->
             <div class="profile overlapped">
                 <div class="avatar">
-                    <img src="/assets/oliverButler.png" height="100px" width="100px">
+                    <img src="../assets/oliverButler.png" height="100px" width="100px">
                 </div>
                 <div class="bg-pane">
                     <div class="description">
@@ -60,7 +60,7 @@
             <!-- Card 2 -->
             <div class="profile overlapped">
                 <div class="avatar">
-                    <img src="/assets/sammyDay.png" height="100px" width="100px">
+                    <img src="../assets/sammyDay.png" height="100px" width="100px">
                 </div>
                 <div class="bg-pane">
                     <div class="description">
@@ -104,7 +104,7 @@
             <!-- Card 1 -->
             <div class="profile overlapped">
                 <div class="avatar">
-                    <img src="/assets/lilaCox.png" height="100px" width="100px">
+                    <img src="../assets/lilaCox.png" height="100px" width="100px">
                 </div>
                 <div class="bg-pane">
                     <div class="description">
@@ -119,7 +119,7 @@
             <!-- Card 2 -->
             <div class="profile overlapped">
                 <div class="avatar">
-                    <img src="/assets/joeMeme.png" height="100px" width="100px">
+                    <img src="../assets/joeMeme.png" height="100px" width="100px">
                 </div>
                 <div class="bg-pane">
                     <div class="description">
@@ -141,7 +141,7 @@
         <div class="row space-around">
             <div class="card">
                 <div class="top">
-                    <img src="/assets/inspire1.jpg" height="200px" width="250px">
+                    <img src="../assets/inspire1.jpg" height="200px" width="250px">
                 </div>
                 <div class="bottom">
                     <div class="description">
@@ -154,7 +154,7 @@
             </div>
             <div class="card">
                 <div class="top">
-                    <img src="/assets/inspire2.jpg" height="200px" width="250px">
+                    <img src="../assets/inspire2.jpg" height="200px" width="250px">
                 </div>
                 <div class="bottom">
                     <div class="description">
@@ -168,7 +168,7 @@
             </div>
             <div class="card">
                 <div class="top">
-                    <img src="/assets/inspire3.jpg" height="200px" width="250px">
+                    <img src="../assets/inspire3.jpg" height="200px" width="250px">
                 </div>
                 <div class="bottom">
                     <div class="description">
@@ -192,12 +192,12 @@
                 </i>
             </div>
             <div class="content">
-                <img src="/assets/book1.jpg" height="300px" width="300px">
+                <img src="../assets/book1.jpg" height="300px" width="300px">
                 <h3><i>by Keegan Kuhn</i></h3>
                 <a href="#" class="button green">Buy on Amazon</a>
             </div>
             <div class="content">
-                <img src="/assets/book2.jpg" height="300px" width="300px">
+                <img src="../assets/book2.jpg" height="300px" width="300px">
                 <h3><i>by Eunice Wong</i></h3>
                 <a href="#" class="button green">Buy on Amazon</a>
             </div>
