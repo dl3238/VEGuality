@@ -46,12 +46,13 @@
             <div class="description">
               <h2>Switch</h2>
               <p>Want to know more about veganism, the myths, tips to talk to family and friends, and how to be maintain a plant-based life? Here's how!</p>
-              <div class="button call-to-action pink">
+              <a href="HTML/switch.html"><div class="button call-to-action pink">
                 Show Me
                 <i class="material-icons">
                   keyboard_arrow_right
                 </i>
-              </div>
+              </div></a>
+
             </div>
           </div>
         </div>
@@ -64,12 +65,15 @@
             <div class="description">
               <h2>Cook</h2>
               <p>Mouthwatering meat-free meals are easy to cook. Check out the meals and create your own grocery list.</p>
-              <div class="button call-to-action pink">
+              <a href="HTML/cook.html">
+                <div class="button call-to-action pink">
                 Show Me
                 <i class="material-icons">
                   keyboard_arrow_right
                 </i>
-              </div>
+                </div>
+              </a>
+
             </div>
           </div>
         </div>
@@ -82,12 +86,15 @@
             <div class="description">
               <h2>Explore</h2>
               <p>Vegans are everywhere! Check out restaurants to dine, fashion to wear, cities to visit, and movements to follow and empower.</p>
-              <div class="button call-to-action pink">
+              <a href="HTML/explore.html">
+                <div class="button call-to-action pink">
                 Show Me
                 <i class="material-icons">
                   keyboard_arrow_right
                 </i>
-              </div>
+                </div>
+              </a>
+
             </div>
           </div>
         </div>
@@ -103,6 +110,12 @@
             <div class="description">
               <h2>Inspire</h2>
               <p>You are NOT alone. Read their stories and be amazed of what they have learned about themselves and their identities. Have confidence to post your own story!</p>
+              <a href="HTML/inspire.html"><div class="button call-to-action pink">
+                Show Me
+                <i class="material-icons">
+                  keyboard_arrow_right
+                </i>
+              </div></a>
               <div class="button call-to-action pink">
                 Show Me
                 <i class="material-icons">
@@ -121,12 +134,13 @@
             <div class="description">
               <h2>Connect</h2>
               <p>Link with other people! It's good for the soul. Click here to see what other vegans had to say, and post your own if you feel up to the task!</p>
-              <div class="button call-to-action pink">
+              <a href="HTML/connect.html"><div class="button call-to-action pink">
                 Show Me
                 <i class="material-icons">
                   keyboard_arrow_right
                 </i>
-              </div>
+              </div></a>
+
             </div>
           </div>
         </div>
