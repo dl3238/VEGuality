@@ -5,7 +5,7 @@
 
     <title>TITLE</title>
 
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 
