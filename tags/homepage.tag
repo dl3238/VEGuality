@@ -4,7 +4,7 @@
 
     <title>VEGuality</title>
 
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   </head>
@@ -16,7 +16,7 @@
       </div>
       <div style="padding-top:20px;" class="links row vertically-centered">
         <a class="row vertically-centered" href="./HTML/switch.html">SWITCH</a>
-        <a class="row vertically-centered" href="HTML/cook.html">COOK</a>
+        <a class="row vertically-centered" href="../HTML/cook.html">COOK</a>
         <a class="row vertically-centered" href="HTML/explore.html">EXPLORE</a>
         <a class="row vertically-centered" href="HTML/inspire.html">INSPIRE</a>
         <a class="row vertically-centered" href="HTML/connect.html">CONNECT</a>
