@@ -46,5 +46,5 @@
 
 
 * Github Repository: https://github.com/dl3238/VEGuality
-* Demonstration page: https://dl3238.github.io/Final-Project-MSTU5013-/
+* Demonstration page: https://dl3238.github.io/VEGuality/
 * YouTube Reflection Video: https://youtu.be/2h7YfyoA_uI
