@@ -1,7 +1,5 @@
 # MSTU 5013 Final Project: VEGuality  
 
-### By: Melissa Yeo, Brenda Khor, Dongxin Li
-
 #### Design Executive Summary
 
 * Strategy
